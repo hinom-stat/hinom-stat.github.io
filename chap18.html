@@ -3609,6 +3609,7 @@ M = \{x_B \in B \mid B \in \mathcal{B}\}
 <ul>
 <li>(<span class="math inline">\(T\)</span> が有限集合 <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\ell^\infty(T)\)</span> が可分)</li>
 </ul>
+<!-- TODO: ここでいう連続とはどういう意味であったか-->
 <p><span class="math inline">\(\# T = n &lt; \infty\)</span> のとき, 以下のような写像 <span class="math inline">\(f:\ell^\infty(T) \to \mathbb{R}^n\)</span> を考えると <span class="math display">\[
 f(z) \coloneqq z(t_1) e_1 + \dots + z(t_n) e_n
 \]</span> 全単射かつ連続であり, これは同相写像. <span class="math display">\[
@@ -3810,7 +3811,7 @@ M_4 = \max \{ \sup_{t &lt; - L} | x(t) |, \sup_{t \in [- L, R]} | x(t) |, \sup_{
 </div>
 </div>
 </div>
-<p><span class="citation" data-cites="matsuzaka2018">松坂 (<a href="#ref-matsuzaka2018" role="doc-biblioref">2018</a>)</span> では距離空間上で議論されているが, 証明で距離の性質のうち, 非退化性は用いていないため, 擬距離空間上でも成り立つ.</p>
+<p><span class="citation" data-cites="matsuzaka2018">松坂 (<a href="#ref-matsuzaka2018" role="doc-biblioref">2018</a>)</span> では距離空間上で議論されているが, 証明の中で距離の性質のうち, 非退化性は用いていないため, 擬距離空間上でも成り立つ.</p>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><br>
 <span class="math inline">\(z\)</span> は <span class="math inline">\(T\)</span> 上で連続なので, 任意の <span class="math inline">\(\varepsilon &gt; 0\)</span>, 任意の <span class="math inline">\(x\in T\)</span> に対して, ある（<span class="math inline">\(x\)</span> に依存しうる）<span class="math inline">\(\delta_x &gt; 0\)</span> が存在して, <span id="eq-continuity"><span class="math display">\[
@@ -3873,18 +3874,18 @@ f^{-1} =
 <li><span class="math inline">\(C[0, 1]\)</span> は一様ノルムに関して可分</li>
 </ul>
 <p><span class="math inline">\(f\in C[0, 1]\)</span> のうち, ある <span class="math inline">\(n\in\mathbb{N}\)</span> が存在して、任意の <span class="math inline">\(m = 0,1,...,n\)</span> に対して, <span class="math inline">\(f(m/n)\in\mathbb{Q}\)</span> で, 各 <span class="math inline">\(m\)</span> について, <span class="math inline">\((m/n, f(m/n))\)</span> と <span class="math inline">\(((m+1)/n, f((m+1)/n))\)</span> を端点とする線分でつながっているような関数全体の集合を <span class="math inline">\(\mathcal{G}\)</span> とおく. 各点 <span class="math inline">\(m/n\)</span> は有理数個, <span class="math inline">\(z(m/n)\in\mathbb{Q}\)</span>, 各 <span class="math inline">\(n\)</span> に対して関数は可算個なので, <span class="math inline">\(\mathcal{G}\)</span> は可算.</p>
-<p><a href="#lem-continuous-separable" class="quarto-xref">Lemma 9</a> より, <span class="math inline">\(f\)</span> はコンパクト集合上の連続関数なので, 一様連続である. したがって, 一様連続の定義より, 任意の <span class="math inline">\(\varepsilon &gt; 0\)</span> に対して, 十分に大きな <span class="math inline">\(n\)</span> をとると, 各 <span class="math inline">\(m\)</span> について <span class="math inline">\((m/n, 0)\)</span>, <span class="math inline">\(((m+1)/n, 0)\)</span> の距離を十分に小さくできて, 任意の <span class="math inline">\(x, y \in [m/n, (m+1)/n]\)</span> に対して, <span class="math display">\[
-| f(x) - f(y) | &lt; \varepsilon / 2
+<p><a href="#lem-compact-continuous-uniformly-continuous" class="quarto-xref">Lemma 8</a> より, 任意の <span class="math inline">\(f\in C[0,1]\)</span> はコンパクト集合上の連続関数なので, 一様連続である. したがって, 一様連続の定義より, 任意の <span class="math inline">\(\varepsilon &gt; 0\)</span> に対して, 十分に大きな <span class="math inline">\(n\)</span> をとると, 各 <span class="math inline">\(m\)</span> について <span class="math inline">\((m/n, 0)\)</span>, <span class="math inline">\(((m+1)/n, 0)\)</span> の距離を十分に小さくできて, 任意の <span class="math inline">\(x, y \in [m/n, (m+1)/n]\)</span> に対して, <span class="math display">\[
+| f(x) - f(y) | &lt; \varepsilon / 3
 \]</span> とできる. また, 有理数の稠密性から, 各 <span class="math inline">\(m\)</span> ごとに <span class="math inline">\(q_m\in\mathbb{Q}\)</span> を選んで, <span class="math display">\[
-| f(m/n) - q_m | &lt; \varepsilon / 2
+| f(m/n) - q_m | &lt; \varepsilon / 3
 \]</span> とできて, 隣り合う <span class="math inline">\(q_m\)</span> を線分でつないだ関数 <span class="math inline">\(g\in\mathcal{G}\)</span> が作れる.</p>
 <p>各 <span class="math inline">\(m\)</span> について, <span class="math inline">\((m/n, f(m/n))\)</span> と <span class="math inline">\(((m+1)/n, f((m+1)/n))\)</span> を端点とした線分をつなげて作った関数を <span class="math inline">\(h\)</span> とする.</p>
 <p>このとき, 各区間 <span class="math inline">\([m/n, (m+1)/n]\)</span> において, <span class="math display">\[
 \begin{align*}
   | f(x) - g(x) |
   &amp;\leq | f(x) - h(x) | + | h(x) - g(x) | \\
-  &amp;&lt; \varepsilon / 2 + \max\{ | f(m/n) - q_m |, | f((m+1)/n) - q_{m+1} | \} \\
-  &amp;&lt; \varepsilon
+  &amp;&lt; \varepsilon / 3 + \max\{ | f(m/n) - q_m |, | f((m+1)/n) - q_{m+1} | \} \\
+  &amp;&lt; 2 \varepsilon / 3
 \end{align*}
 \]</span> したがって, <span class="math inline">\(\| f - g \|_{[0, 1]} &lt; \varepsilon\)</span> が成り立つので, <span class="math inline">\(B(f, \varepsilon) \cap \mathcal{G} \neq \emptyset\)</span> であり, <span class="math inline">\(\mathcal{G}\)</span> は <span class="math inline">\(C[0, 1]\)</span> において稠密.</p>
 <p>以上より, <span class="math inline">\(C[0, 1]\)</span> は加算で稠密な部分集合 <span class="math inline">\(\mathcal{G}\)</span> をもつので, 可分.</p>
@@ -3911,8 +3912,8 @@ f^{-1} =
 \]</span> が成り立つ. <span class="math inline">\(c \neq c&#39;\)</span> なる任意の <span class="math inline">\(c\)</span>, <span class="math inline">\(c&#39;\)</span> について, <span class="math display">\[
 \| \Large{\mathbb{1}}_{\normalsize [a, c)} - \Large{\mathbb{1}}_{\normalsize [a, c&#39;)} \normalsize \|_{[a, b]}
 = \sup_{t\in[a, b]} | \Large{\mathbb{1}}_{\normalsize [a, c)} \normalsize (t) - \Large{\mathbb{1}}_{\normalsize [a, c&#39;)} \normalsize (t) | = 1
-\]</span> つまり, 一様ノルムで定まる距離および <span class="math inline">\(0 &lt; \varepsilon &lt; 1\)</span> に関して, 開球を <span class="math inline">\(U_c \coloneqq B\{ \Large{\mathbb{1}}_{\normalsize [a, c)} \normalsize ; \varepsilon\}\)</span> と定義すると, <span class="math inline">\(\{U_c\}_{c \, \in \, (a, b]}\)</span> は非可算個の互いに素な開球族である.</p>
-<p>可分距離空間において, 互いに素な開球族は高々可算であるので, <span class="math inline">\(D[a, b]\)</span> は可分ではない.</p>
+\]</span> つまり, 一様ノルムで定まる距離および <span class="math inline">\(0 &lt; \varepsilon &lt; 1\)</span> に関して, 開球を <span class="math inline">\(U_c \coloneqq B(\Large{\mathbb{1}}_{\normalsize [a, c)} \normalsize ; \varepsilon)\)</span> と定義すると, <span class="math inline">\(\{U_c\}_{c \, \in \, (a, b]}\)</span> は非可算個の互いに素な開球族である.</p>
+<p><a href="#lem-distinct-openball" class="quarto-xref">Lemma 4</a> より, 可分距離空間において, 任意の互いに素な開球族は高々可算であるので, <span class="math inline">\(D[a, b]\)</span> は可分ではない.</p>
 </div>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -3942,10 +3943,10 @@ f^{-1} =
 <p><span class="theorem-title"><strong>Example 5 (<span class="citation" data-cites="vaart1998">van der Vaart (<a href="#ref-vaart1998" role="doc-biblioref">1998</a>)</span> Example 18.7 一様連続関数)</strong></span>  </p>
 <hr>
 <p><span class="math inline">\(T\)</span> を全有界な, 擬距離 <span class="math inline">\(\rho\)</span> を備えた擬距離空間とする. 一様連続関数 <span class="math inline">\(z:T \to \mathbb{R}\)</span> 全体の集合を <span class="math inline">\(UC(T, \rho)\)</span> とする. 全有界な擬距離空間上の一様連続関数は有界(cf: <a href="#lem-totalbounded-bounded" class="quarto-xref">Lemma 11</a> )なので, <span class="math inline">\(UC(T, \rho) \subset \ell^\infty (T)\)</span> が成り立つ. <span class="math inline">\(UC(T, \rho)\)</span> にも一様ノルムを入れる.</p>
-<p><a href="#lem-continuous-separable" class="quarto-xref">Lemma 9</a> より, さらに <span class="math inline">\(T\)</span> がコンパクトならば, <span class="math inline">\(C(T, \rho) \subset UC(T, \rho)\)</span> である.</p>
+<p><a href="#lem-continuous-separable" class="quarto-xref">Lemma 9</a> より, さらに <span class="math inline">\(T\)</span> がコンパクトならば, <span class="math inline">\(C(T, \rho) = UC(T, \rho)\)</span> である.</p>
 <hr>
 <p>実際に, 任意の <span class="math inline">\(UC(T, \rho)\)</span> はある <span class="math inline">\(C(\overline{T}, \rho)\)</span> と同一視できる. なぜなら, 全有界な擬距離空間 <span class="math inline">\(T\)</span> の完備化 <span class="math inline">\(\overline{T}\)</span> はコンパクトであり(cf: <a href="#lem-compactness-totallybonded-complete" class="quarto-xref">Lemma 12</a>), <span class="math inline">\(T\)</span> 上のすべての一様連続関数はその完備化 <span class="math inline">\(\overline{T}\)</span> へ一意に連続拡張できるためである.</p>
-<p><span class="math inline">\(UC(T, \rho)\)</span> は可分である(cf: <a href="#lem-uc-separable" class="quarto-xref">Lemma 13</a>). <u>さらに, そのボレル集合体はすべての座標射影によって生成される <span class="math inline">\(\sigma\)</span> -加法族に等しい(cf: <a href="#exr-3" class="quarto-xref">Exercise 3</a>). ここで座標射影とは, <span class="math inline">\(t\in T\)</span> を動かして定まる写像 <span class="math inline">\(z \mapsto z(t)\)</span> のことである.</u> 座標射影は連続なので, ボレル可測である.</p>
+<p><span class="math inline">\(UC(T, \rho)\)</span> は可分である(cf: <a href="#lem-uc-separable" class="quarto-xref">Lemma 13</a>). さらに, そのボレル集合体はすべての座標射影によって生成される <span class="math inline">\(\sigma\)</span> -加法族に等しい(cf: <a href="#exr-3" class="quarto-xref">Exercise 3</a>). ここで座標射影とは, <span class="math inline">\(t\in T\)</span> を動かして定まる写像 <span class="math inline">\(z \mapsto z(t)\)</span> のことである. 座標射影は連続なので, ボレル可測である.</p>
 </div>
 </div>
 </div>
@@ -3981,9 +3982,6 @@ Remark
 </div>
 </div>
 </div>
-<ul>
-<li>下線部について, 分かっていません.</li>
-</ul>
 <div class="callout callout-style-simple callout-warning no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -4052,8 +4050,8 @@ T
   x_{n_k} &amp;\in B_k, ただし, n_k &gt; n_{k-1} &gt; \dots &gt; n_2 &gt; n_1 \\
   &amp;\vdots
 \end{align*}
-\]</span> 入れ子構造より, <span class="math inline">\(k \leq l\)</span> なら, <span class="math inline">\(x_l \in B_l \subset B_k\)</span> なので, 十分に大きい添え字をとると, <span class="math inline">\(B_k\)</span> に入るようにできる. 任意の <span class="math inline">\(\varepsilon &gt; 0\)</span> に対して, 開球 <span class="math inline">\(B_K\)</span> の直径 <span class="math inline">\(2 / K &lt; \varepsilon\)</span> となるような <span class="math inline">\(K\)</span> がとれて, <span class="math inline">\(n_m, n_n \geq K\)</span> ならば, <span class="math inline">\(x_{n_m}\)</span>, <span class="math inline">\(x_{n_n} \in B_K\)</span> より, <span class="math display">\[
-\rho(x_{n_m}, x_{n_n}) \leq 2 / K &lt; \varepsilon
+\]</span> 入れ子構造より, <span class="math inline">\(k \leq l\)</span> なら, <span class="math inline">\(x_l \in B_l \subset B_k\)</span> なので, 十分に大きい添え字をとると, <span class="math inline">\(B_k\)</span> に入るようにできる. 任意の <span class="math inline">\(\varepsilon &gt; 0\)</span> に対して, 開球 <span class="math inline">\(B_K\)</span> の直径 <span class="math inline">\(2 / K &lt; \varepsilon\)</span> となるような <span class="math inline">\(K\)</span> がとれて, <span class="math inline">\(u, v \geq K\)</span> ならば, <span class="math inline">\(x_{n_u}, x_{n_v} \in B_K\)</span> より, <span class="math display">\[
+\rho(x_{n_u}, x_{n_v}) \leq 2 / K &lt; \varepsilon
 \]</span> が成り立ち, <span class="math inline">\(x_{n_k}\)</span> はコーシー列である.</p>
 </div>
 <div class="callout callout-style-simple callout-warning no-icon">
@@ -4071,20 +4069,34 @@ T
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><br>
-<span class="math inline">\(T\)</span> は全有界なので, 任意の <span class="math inline">\(n\in\mathbb{N}\)</span> に対して, 有限集合 <span class="math inline">\(F_n\subset T\)</span> が存在して, <span class="math display">\[
-T \subset \bigcup_{a\in F_n} B(a; 1 / n) = \bigcup_{a\in F_n} \{x \mid \rho(a, x) &lt; 1 / n\}
-\]</span> が成り立つ. <span class="math inline">\(\bigcup_{n=1}^{\infty} F_n\)</span> は可算であり, あとは稠密であることを示せばよい.</p>
-<p><span class="math inline">\(\bigcup_{n=1}^{\infty} F_n = M \coloneqq {m_1, m_2, ...}\)</span> とおく. <span class="math inline">\(r &gt; 0 \in\mathbb{Q}\)</span> と有限集合 <span class="math inline">\(S \subset M\)</span> をとり, <span class="math display">\[
-A_1 = B(s_1; r)
+<p><span class="proof-title"><em>Proof</em>. </span></p>
+<ul>
+<li>可算な関数族 <span class="math inline">\(\mathcal{F}\)</span> を作る.</li>
+</ul>
+<p><span class="math inline">\(T\)</span> は全有界なので, 任意の <span class="math inline">\(r \in\mathbb{Q}_{&gt; 0}\)</span> と有限集合 <span class="math inline">\(S = \{s_1, s_2, ..., s_n\}\)</span> をとって <span class="math display">\[
+T \subset \bigcup_{i=1}^n B_\rho(s_i; r)
+\]</span> とできる. この開球による有限被覆を以下のように分割する. <span class="math display">\[
+A_1 = B_\rho(s_1; r)
 \]</span> <span class="math display">\[
-A_k = B(s_k; r) \backslash \{ \bigcup_{j=1}^{k-1} B(s_j; r) \}
-\]</span> とおくと, 各 <span class="math inline">\(A_k \supset B(s_k; r)\)</span> なので, <span class="math inline">\(\delta_\rho(A_k) \leq 2 r\)</span> である. 有理数ベクトル <span class="math inline">\((q_1, ..., q_k)\)</span> を選び, <span class="math display">\[
+A_k = B_\rho(s_k; r) \backslash \left\{ \bigcup_{j=1}^{k-1} B_\rho(s_j; r) \right\}, \quad (k = 2, 3, ..., n)
+\]</span> とおくと, 各 <span class="math inline">\(A_k \subset B(s_k; r)\)</span> なので, <span class="math inline">\(A_k\)</span> の直径は <span class="math inline">\(2 r\)</span> 以下である. 有理数ベクトル <span class="math inline">\((q_1, ..., q_n) \in\mathbb{Q}^{n}\)</span> を選び, <span class="math display">\[
 f(x) \coloneqq \sum_{k=1}^n q_k \Large\mathbb{1}_{\normalsize A_k}\normalsize(x)
-\]</span> と定義すると, <span class="math inline">\(f\)</span> 全体の集合は可算.</p>
-<p>任意の <span class="math inline">\(\varepsilon &gt; 0\)</span> を固定すると, 一様連続性より, ある <span class="math inline">\(\delta &gt; 0\)</span> が存在して, <span class="math display">\[
-\rho(x, y) &lt; \delta \Leftarrow | z(x) - z(y) | &lt; \varepsilon /3
-\]</span> <span class="math inline">\(r &lt; \delta / 2\)</span> でとると, 全有界性より <span class="math inline">\(S \subset M\)</span> が存在して, <span class="math inline">\(T\subset\cap_{s\in S} B(s; r)\)</span> が成り立つ.</p>
+\]</span> と定義すると, <span class="math inline">\(f\)</span> 全体の集合 <span class="math inline">\(\mathcal{F}\)</span> は可算.</p>
+<ul>
+<li><span class="math inline">\(\mathcal{F}\)</span> が <span class="math inline">\(UC(T, \rho)\)</span> において稠密であることを示す.</li>
+</ul>
+<p>任意の <span class="math inline">\(z\in UC(T, \rho)\)</span> について, 任意の <span class="math inline">\(\varepsilon &gt; 0\)</span> を固定すると, 一様連続性より, ある <span class="math inline">\(\delta &gt; 0\)</span> が存在して, <span class="math display">\[
+\rho(x, y) &lt; \delta \Rightarrow | z(x) - z(y) | &lt; \varepsilon /3
+\]</span> が成り立つ. 上で作った開球による有限被覆 <span class="math display">\[
+T \subset \bigcup_{i=1}^n B_\rho(s_i; r)
+\]</span> の半径 <span class="math inline">\(r \in \mathbb{Q}\)</span> を <span class="math inline">\(0 &lt; r &lt; \delta / 2\)</span> でとり, 上と同様の手順で作った分割 <span class="math inline">\(\{A_k\}\)</span> を使って <span class="math display">\[
+g(x) \coloneqq \sum_{k = 1}^n z(s_k) \Large \mathbb{1}_{\normalsize A_k} \normalsize (x)
+\]</span> と定義する. 各 <span class="math inline">\(x \in A_k\)</span> に対して, <span class="math inline">\(\rho(x, s_k) &lt; r &lt; \delta\)</span> より, <span class="math display">\[
+| z(x) - g(x) | = | z(x) - z(s_k) | &lt; \varepsilon / 3
+\]</span> なので, <span class="math inline">\(\| z - g \|_T &lt; \varepsilon / 3\)</span>.</p>
+<p>さらに, 各 <span class="math inline">\(k\)</span> について <span class="math inline">\(q_k\in\mathbb{Q}\)</span> を <span class="math inline">\(| q_k - z(s_k) | &lt; \varepsilon / 3\)</span> となるように選んで <span class="math inline">\(f \in \mathcal{F}\)</span> を作れば, <span class="math inline">\(\| g - f \|_T &lt; \varepsilon / 3\)</span> である. したがって, <span class="math display">\[
+\| z - f \|_T \leq \| z - g \|_T + \| g - f \|_T \leq 2 \varepsilon / 3 &lt; \varepsilon
+\]</span> つまり, 任意の <span class="math inline">\(\varepsilon &gt; 0\)</span> と任意の <span class="math inline">\(z \in UC(T, \rho)\)</span> に対して, <span class="math inline">\(\varepsilon\)</span> 近似となる関数 <span class="math inline">\(f\)</span> の可算集合 <span class="math inline">\(\mathcal{F}\)</span> がとれるので, <span class="math inline">\(UC(T, \rho)\)</span> は可分である.</p>
 </div>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -4147,7 +4159,7 @@ f((x_1, y_1), (x_2, y_2)) = d(x_1, x_2) \lor e(y_1, y_2)
 <li><span class="math inline">\(\mathscr{B}(\D) \otimes \mathscr{B}(\E)
 \subset \mathscr{B}(\D\times\E)\)</span></li>
 </ul>
-<p>可分でなくとも, 一般に成り立つ. 定義より, <span class="math display">\[
+<p>可分でなくとも, 一般に成り立つ. 定義(cf: <span class="citation" data-cites="yoshida2006">吉田 (<a href="#ref-yoshida2006" role="doc-biblioref">2006</a>)</span> p.92)より, <span class="math display">\[
 \mathscr{B}(\D) \otimes \mathscr{B}(\E)
 = \sigma[\{A \times B \mid A \in\mathscr{B}(\D), B\in\mathscr{B}(\E)\}]
 \]</span> であり, <span class="math inline">\(A \times B = (A\times\E) \cap (\D\times B)\)</span> と表せる.</p>
@@ -4178,7 +4190,7 @@ f((x_1, y_1), (x_2, y_2)) = d(x_1, x_2) \lor e(y_1, y_2)
 <p>2章では分布関数に関連して弱収束が定義されたが, 分布関数を自然な形で距離空間上の確率要素に拡張するのは難しい. 代わりに, portmanteauの補題の主張の1つを用いて弱収束を定義する.</p>
 <p>確率要素 <span class="math inline">\(X_n\)</span> が確率要素 <span class="math inline">\(X\)</span> に弱収束するとは, すべての有界連続関数 <span class="math inline">\(f: \D \to \mathbb{R}\)</span> について, <span class="math display">\[
 E[f(X_n)] \to E[f(X)]
-\]</span> が成り立つこととする. 一方, 実用上 <span class="math inline">\(X_n\)</span> がボレル可測でなかった, という状況はありえて, この場合には期待値（ルベーグ積分）が定義できない. 代わりに, 外期待値（outer expectation）と外確率（outer probability）を導入する.</p>
+\]</span> が成り立つこととする. 一方, 実用上 <span class="math inline">\(X_n\)</span> がボレル可測か分からない, という状況はありえて, この場合には期待値（ルベーグ積分）が定義できない. 代わりに, 外期待値（outer expectation）と外確率（outer probability）を導入する.</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -4238,10 +4250,66 @@ P^\ast(B) = \inf\{ P(A) \mid B \subset A, A \in \mathcal{U} \}
 <ul>
 <li><span class="citation" data-cites="vaart1996">van der Vaart and Wellner (<a href="#ref-vaart1996" role="doc-biblioref">1996</a>)</span> p6 より, <span class="math inline">\(E_\ast[X]\)</span>, <span class="math inline">\(P_\ast(A)\)</span> は以下で定義される. <span class="math display">\[
 E_\ast [X] = - E^\ast [- X]
-\]</span> <span id="eq-inner-probability"><span class="math display">\[
+\]</span> <span class="math display">\[
 P_\ast(A) = 1 - P^\ast(A^C)
-\tag{9}\]</span></span></li>
+\]</span></li>
 </ul>
+<div class="callout callout-style-simple callout-warning no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="lem-outer-expectation-probability" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 15 (<span class="citation" data-cites="vaart1996">van der Vaart and Wellner (<a href="#ref-vaart1996" role="doc-biblioref">1996</a>)</span> Lemma 1.2.3)</strong></span>  </p>
+<hr>
+<p>外確率, 外期待値について次の（不）等式が成り立つ. <span class="math display">\[
+P_\ast (A) \leq P^\ast (A)
+\]</span> <span class="math display">\[
+P^\ast(A) = E^\ast[\Large\mathbb{1}_{\normalsize A}\normalsize]
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span></p>
+<ul>
+<li><span class="math inline">\(P_\ast (A) \leq P^\ast (A)\)</span> を示す.</li>
+</ul>
+<p><span class="math inline">\(A\subset B\)</span> を満たして, かつ可測であるような任意の集合 <span class="math inline">\(B\)</span> について, <span class="math inline">\(B^C\subset A^C\)</span> なので, <span class="math display">\[
+P^\ast(A^C) \geq P^\ast(B^C) = P(B^C) = 1 - P(B)
+\]</span> より, <span class="math display">\[
+P(B) \geq 1 - P^\ast(A^C) = P_\ast(A)
+\]</span> <span class="math inline">\(B\)</span> は任意なので, <span class="math display">\[
+P^\ast(A) = \inf \{P(B) \mid A \subset B, B は可測\} \geq P_\ast(A).
+\]</span></p>
+<ul>
+<li><span class="math inline">\(P^\ast(A) \leq E^\ast[\Large\mathbb{1}_{\normalsize A}\normalsize]\)</span> を示す.</li>
+</ul>
+<p><span class="math inline">\(U\geq\Large\mathbb{1}_{\normalsize A}\)</span> でかつ, 可測な <span class="math inline">\(U\)</span> を任意にとる. <span class="math inline">\(B\coloneqq \{ U \geq 1 \}\)</span> は可測で, <span class="math inline">\(A\subset B\)</span> となる. <span class="math display">\[
+E[U]
+\geq E[\Large\mathbb{1}_{\normalsize B}\normalsize]
+= P(B)
+\geq P^\ast (A)
+\]</span> が成り立つ. <span class="math inline">\(U\)</span> は任意なので, <span class="math display">\[
+E^\ast[\Large\mathbb{1}_{\normalsize A}\normalsize]
+= \inf \{ E[U] \mid U \geq \Large\mathbb{1}_{\normalsize A}\normalsize, U は可測, E[U] が存在 \}
+\geq P^\ast (A).
+\]</span></p>
+<ul>
+<li><span class="math inline">\(E^\ast[\Large\mathbb{1}_{\normalsize A}\normalsize] \leq P^\ast(A)\)</span> を示す.</li>
+</ul>
+<p><span class="math inline">\(A\subset B\)</span> を満たして, かつ可測であるような任意の集合 <span class="math inline">\(B\)</span> について, <span class="math inline">\(\Large\mathbb{1}_{\normalsize B}\)</span> は可測で, <span class="math inline">\(\Large\mathbb{1}_{\normalsize B} \normalsize \geq \Large\mathbb{1}_{\normalsize A}\)</span> なので, <span class="math display">\[
+E^\ast[\Large\mathbb{1}_{\normalsize A}\normalsize]
+\leq E[\Large\mathbb{1}_{\normalsize B}\normalsize]
+= P(B)
+\]</span> <span class="math inline">\(B\)</span> は任意なので, <span class="math display">\[
+E^\ast[\Large\mathbb{1}_{\normalsize A}\normalsize]
+\leq \inf \{ P(B) \mid A\subset B, Bは可測\}
+= P^\ast(A).
+\]</span></p>
+</div>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -4283,7 +4351,7 @@ d(X_n, X) \leq \Delta_n, \, \Delta_n \stackrel{as}{\to} 0
 </div>
 <div class="callout-body-container">
 <div id="lem-portmanteau" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 15 (<span class="citation" data-cites="vaart1998">van der Vaart (<a href="#ref-vaart1998" role="doc-biblioref">1998</a>)</span> Lemma 18.9 Portmanteau)</strong></span>  </p>
+<p><span class="theorem-title"><strong>Lemma 16 (<span class="citation" data-cites="vaart1998">van der Vaart (<a href="#ref-vaart1998" role="doc-biblioref">1998</a>)</span> Lemma 18.9 Portmanteau)</strong></span>  </p>
 <hr>
 <p>任意の写像 <span class="math inline">\(X_n: \Omega_n \to \D\)</span> および, 値を <span class="math inline">\(\D\)</span> にとるようなすべての確率要素 <span class="math inline">\(X\)</span> について, 以下の主張はすべて同値である.</p>
 <ol type="1">
@@ -4356,17 +4424,24 @@ h_m(x) = \max \{1 - m \text{dist}(x, G^C), 0\}
 <li>5 <span class="math inline">\(\Rightarrow\)</span> 1</li>
 </ul>
 <p>任意の有界連続関数 <span class="math inline">\(f:\D\to\mathbb{R}\)</span> をとる. 有界なので, ある <span class="math inline">\(l, u \in \mathbb{R}\)</span> が存在して <span class="math inline">\(l &lt; f &lt; u\)</span> かつ <span class="math inline">\(u \neq 0\)</span> となる. <span class="math inline">\(g = (f - l) / u\)</span> とおくと, <span class="math inline">\(0 &lt; g &lt; 1\)</span> である. <span class="math inline">\(t\in(0, 1)\)</span> に対して, <span class="math inline">\(G_t = \{x \in \D \mid g(x) &gt; t\}\)</span> とおくと, <span class="math inline">\(g\)</span> は連続なので <span class="math inline">\(\partial G_t = \{x \in \D \mid g(x) = t\}\)</span> が成り立つ.</p>
-<p>ここで, <span class="math inline">\(J = \{ P(\partial G_t) &gt; 0 \}\)</span>, <span class="math inline">\(J_i = \{ P(\partial G_{t_i}) &gt; 1/n \}\)</span> とおく. 各 <span class="math inline">\(i\)</span> について, ある <span class="math inline">\(n_i\)</span> が存在して <span class="math inline">\(P(\partial G_{t_i}) &gt; 1/n_i\)</span> が成り立つので, <span class="math display">\[
+<p>ここで, <span class="math inline">\(J = \{ t\in(0, 1) \mid P(\partial G_t) &gt; 0 \}\)</span>, <span class="math inline">\(J_i = \{ t\in(0, 1) \mid P(\partial G_{t_i}) &gt; 1/n \}\)</span> とおく. 各 <span class="math inline">\(i\)</span> について, ある <span class="math inline">\(n_i\)</span> が存在して <span class="math inline">\(P(\partial G_{t_i}) &gt; 1/n_i\)</span> が成り立つので, <span class="math display">\[
 J = \bigcup_{i = 1}^\infty J_i
 \]</span> であり, <span class="math inline">\(J\)</span> は可算. したがって, 可算個の <span class="math inline">\(t\)</span> を除いて <span class="math inline">\(P(\partial G_t) = 0\)</span> を満たす.</p>
-<p>仮定の条件5より, <span class="math inline">\(P(\partial G_t) = 0\)</span> を満たす <span class="math inline">\(t\)</span> について, <span class="math inline">\(P^\ast(X_n\in G_t) \to P(X\in G_t)\)</span> が成り立つ. 有界収束定理と <a href="#lem-layer-cake-representation" class="quarto-xref">Lemma 16</a> より,</p>
+<ul>
+<li><span class="math inline">\(\{X_n\}\)</span> が可測な場合</li>
+</ul>
+<p>仮定の条件5より, <span class="math inline">\(P(\partial G_t) = 0\)</span> を満たす <span class="math inline">\(t\)</span> について, <span class="math inline">\(P(X_n\in G_t) \to P(X\in G_t)\)</span> が成り立つ. 有界収束定理と <a href="#lem-layer-cake-representation" class="quarto-xref">Lemma 17</a> より,</p>
 <p><span class="math display">\[
-P^\ast g
-= \int_{X} g \, dP^\ast
-= \int_{0}^{1} P^\ast(X_n\in G_t) \, dt
+P_n g
+= \int_{X} g \, dP_n
+= \int_{0}^{1} P_n (X_n\in G_t) \, dt
 \to \int_{0}^{1} P(X\in G_t) \, dt
 = Pg
-\]</span> が成立する. したがって, <span class="math inline">\(P^\ast f \to Pf\)</span> も成り立つ.</p>
+\]</span> が成立する. したがって, <span class="math inline">\(P_n f \to Pf\)</span> も成り立つ.</p>
+<ul>
+<li><span class="math inline">\(\{X_n\}\)</span> が可測でない場合</li>
+</ul>
+<p>外測度についても <a href="#lem-layer-cake-representation" class="quarto-xref">Lemma 17</a> が成り立つか確認できなかった. 有界収束定理に対応するものは <span class="citation" data-cites="kosorok2008">Kosorok (<a href="#ref-kosorok2008" role="doc-biblioref">2008</a>)</span> Lemma 6.12 参照.</p>
 </div>
 <div class="callout callout-style-simple callout-warning no-icon">
 <div class="callout-body d-flex">
@@ -4375,7 +4450,7 @@ P^\ast g
 </div>
 <div class="callout-body-container">
 <div id="lem-layer-cake-representation" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 16 (layer cake representation)</strong></span>  </p>
+<p><span class="theorem-title"><strong>Lemma 17 (layer cake representation)</strong></span>  </p>
 <hr>
 <p><span class="math inline">\((X,\mathcal{F},\mu)\)</span> は測度空間, <span class="math inline">\(f:X\to\mathbb{R}\)</span> は <span class="math inline">\(\mu\)</span>-可積分とする. このとき, 以下が成立. <span class="math display">\[
 \int_{X}|f|\,d\mu=\int_{0}^{\infty}\mu\{|f|&gt;t\} \, dt
@@ -4388,13 +4463,14 @@ P^\ast g
 <p><span class="proof-title"><em>Proof</em>. </span><br>
 まず, <span class="math display">\[
 | f(x) | = \int_{0}^{\infty} \Large\mathbb{1}_{\normalsize[0,|f(x)|]} \normalsize (t) \, dt
-\]</span> が成り立つ. また, <span class="math inline">\(\Large\mathbb{1}_{\normalsize[0,|f(x)|]}\normalsize(t)=\Large\mathbb{1}_{\normalsize\{|f(x)|&gt;t\}}\normalsize(x)\)</span> より, <span class="math display">\[
-\int_{X} |f| \, d\mu = \int_{X} \int_{0}^{\infty} \Large\mathbb{1}_{\normalsize \{|f(x)|&gt;t\}} \normalsize (x) \, dt \, \mu(dx)
-\]</span> である. Fubini-Tonelli の定理より, 積分順序が交換できて, <span class="math display">\[
+\]</span> が成り立つ. また, <span class="math inline">\(\Large\mathbb{1}_{\normalsize[0,|f(x)|]}\normalsize(t)=\Large\mathbb{1}_{\normalsize\{0 \leq t \leq |f(x)|\}}\normalsize(x)\)</span> より, <span class="math display">\[
+\int_{X} |f| \, d\mu = \int_{X} \int_{0}^{\infty} \Large\mathbb{1}_{\normalsize \{|f(x)|\geq t\}} \normalsize (x) \, dt \, \mu(dx)
+\]</span> である. <span class="math inline">\(\Large\mathbb{1}_{\normalsize \{|f(x)|\geq t\}}\)</span> は非負可測なので,Fubini-Tonelli の定理より積分順序が交換できて, <span class="math display">\[
 \int_{X} |f| \, d\mu
-= \int_{0}^{\infty} \int_{X} \Large\mathbb{1}_{\normalsize\{|f(x)|&gt;t\}}\normalsize(x) \, \mu(dx) \, dt
-= \int_{0}^{\infty} \mu\{|f|&gt;t\} \, dt
-\]</span></p>
+= \int_{0}^{\infty} \int_{X} \Large\mathbb{1}_{\normalsize\{|f(x)|\geq t\}}\normalsize(x) \, \mu(dx) \, dt
+= \int_{0}^{\infty} \mu\{|f|\geq t\} \, dt
+= \int_{0}^{\infty} \mu\{|f| &gt; t\} \, dt.
+\]</span> 最後の等号は, <span class="math inline">\(\mu\{|f| &gt; t\}\)</span> は単調減少関数であり, 単調関数の不連続点は高々可算であることから.</p>
 </div>
 <div class="callout callout-style-simple callout-important no-icon">
 <div class="callout-body d-flex">
@@ -4447,7 +4523,7 @@ P(\lim_{n\to\infty} \Delta_n = 0) = 1
   &amp;\leq E^\ast[| f(Y_n) - f(X_n) | \, \Large{\mathbb{1}}_{\{d(X_n, Y_n) \leq \varepsilon\}}\normalsize] + E^\ast[| f(Y_n) - f(X_n) | \, \Large{\mathbb{1}}_{\{d(X_n, Y_n) &gt; \varepsilon\}}\normalsize] + | E^\ast[f(X_n)] - E[f(X)] | \\
   &amp;\leq \|f\|_{\text{lip}} \varepsilon P^\ast(d(X_n, Y_n) \leq \varepsilon) + 2 (\sup | f |) P^\ast(d(X_n, Y_n) &gt; \varepsilon) + | E^\ast[f(X_n)] - E[f(X)] | \\
 \end{align*}
-\]</span> 第一項は <span class="math inline">\(\varepsilon\)</span> の定数倍, 第二項は仮定より <span class="math inline">\(P^\ast(d(X_n, Y_n) &gt; \varepsilon) \to 0\)</span>, 第三項は仮定と <a href="#lem-portmanteau" class="quarto-xref">Lemma 15</a> の1より <span class="math inline">\(| E^\ast[f(X_n)] - E[f(X)] | \to 0\)</span>.</p>
+\]</span> 第一項は <span class="math inline">\(\varepsilon\)</span> の定数倍, 第二項は仮定より <span class="math inline">\(P^\ast(d(X_n, Y_n) &gt; \varepsilon) \to 0\)</span>, 第三項は仮定と <a href="#lem-portmanteau" class="quarto-xref">Lemma 16</a> の1より <span class="math inline">\(| E^\ast[f(X_n)] - E[f(X)] | \to 0\)</span>.</p>
 <ul>
 <li>2: <span class="math inline">\(X_n \stackrel{p}{\to} X \Rightarrow X_n \leadsto X\)</span></li>
 </ul>
@@ -4455,7 +4531,7 @@ P(\lim_{n\to\infty} \Delta_n = 0) = 1
 <ul>
 <li>3: 定数 <span class="math inline">\(c\)</span> について, <span class="math inline">\(X_n \stackrel{p}{\to} c \Leftrightarrow X_n \leadsto c\)</span></li>
 </ul>
-<p><span class="math inline">\(\Rightarrow\)</span> は 2 で <span class="math inline">\(X=c\)</span> の場合. <span class="math inline">\(\Leftarrow\)</span> を示す. <span class="math inline">\(P^\ast (d(X_n, c) \geq \varepsilon) = P^\ast (X_n \in B(c; \varepsilon)^C)\)</span> であり, 開球の補集合は閉なので, <a href="#lem-portmanteau" class="quarto-xref">Lemma 15</a> の4より, <span class="math display">\[
+<p><span class="math inline">\(\Rightarrow\)</span> は 2 で <span class="math inline">\(X=c\)</span> の場合. <span class="math inline">\(\Leftarrow\)</span> を示す. <span class="math inline">\(P^\ast (d(X_n, c) \geq \varepsilon) = P^\ast (X_n \in B(c; \varepsilon)^C)\)</span> であり, 開球の補集合は閉なので, <a href="#lem-portmanteau" class="quarto-xref">Lemma 16</a> の4より, <span class="math display">\[
 \limsup P^\ast (X_n \in B(c; \varepsilon)^C)
 \leq P(c \in B(c; \varepsilon)^C)
 = 0
@@ -4466,7 +4542,7 @@ P(\lim_{n\to\infty} \Delta_n = 0) = 1
 <p>4において, <span class="math inline">\(X_n\)</span> に <span class="math inline">\((X_n, c)\)</span> を, <span class="math inline">\(Y_n\)</span> に <span class="math inline">\((X_n, Y_n)\)</span> を, <span class="math inline">\(X\)</span> に <span class="math inline">\((X, c)\)</span> を代入すると, 示したい命題となる. 次の仮定が成り立つことを示せばよい. <span class="math display">\[
 (X_n, c) \leadsto (X, c), \, P^\ast(d((X_n, Y_n), (X_n, c))) \to 0
 \]</span></p>
-<p>任意の有界連続関数 <span class="math inline">\(f(x, y)\)</span> に対して, <span class="math inline">\(f_c(x) = f(x, c)\)</span> を考えると有界連続なので, <span class="math inline">\(X_n\leadsto X\)</span> と <a href="#lem-portmanteau" class="quarto-xref">Lemma 15</a> の1より, <span class="math inline">\(E^\ast[f(X_n, c)] = E^\ast[f_c(X_n)] \to E[f_c(X)] = E[f(X, c)]\)</span>. したがって, <span class="math inline">\((X_n, c) \leadsto (X, c)\)</span>.</p>
+<p>任意の有界連続関数 <span class="math inline">\(f(x, y)\)</span> に対して, <span class="math inline">\(f_c(x) = f(x, c)\)</span> を考えると有界連続なので, <span class="math inline">\(X_n\leadsto X\)</span> と <a href="#lem-portmanteau" class="quarto-xref">Lemma 16</a> の1より, <span class="math inline">\(E^\ast[f(X_n, c)] = E^\ast[f_c(X_n)] \to E[f_c(X)] = E[f(X, c)]\)</span>. したがって, <span class="math inline">\((X_n, c) \leadsto (X, c)\)</span>.</p>
 <p>また, 仮定より <span class="math inline">\(P^\ast(d((X_n, Y_n), (X_n, c)) &gt; \varepsilon) = P^\ast(d(Y_n, c) &gt; \varepsilon) \to 0\)</span>.</p>
 <ul>
 <li>6: <span class="math inline">\(X_n \stackrel{p}{\to} X, Y_n \stackrel{p}{\to} Y \Rightarrow (X_n, Y_n) \stackrel{p}{\to} (X, Y)\)</span></li>
@@ -4513,17 +4589,17 @@ P(\lim_{n\to\infty} \Delta_n = 0) = 1
 <p>任意の閉集合 <span class="math inline">\(F\)</span> について, 以下の包含関係 <span id="eq-inc-closure"><span class="math display">\[
 \bigcap_{k = 1}^{\infty} \overline{\bigcup_{m = k}^{\infty} \{x \in \D_m \mid g_m(x) \in F\}}
 \subset g_0^{-1} (F) \cup (\D \cap \D_0^C)
-\tag{10}\]</span></span> が成り立つことを示す. <span class="math inline">\(x \in \bigcap_{k = 1}^{\infty} \overline{\bigcup_{m = k}^{\infty} \{x \in \D_m \mid g_m(x) \in F\}}\)</span> をとると, 「任意の <span class="math inline">\(k \geq 1 \in \mathbb{N}\)</span> に対して, <span class="math inline">\(x \in \overline{\bigcup_{m = k}^{\infty} \{x \in \D_m \mid g_m(x) \in F\}}\)</span>」である. 閉包の性質より, <span class="math inline">\(a\in \overline{M}\)</span> ならば, 任意の <span class="math inline">\(\varepsilon &gt; 0\)</span> に対して, <span class="math inline">\(B(a;\varepsilon) \cap M \neq \emptyset\)</span> が成り立つので, 上の命題を言い換えると次のようになる. <span class="math display">\[
+\tag{9}\]</span></span> が成り立つことを示す. <span class="math inline">\(x \in \bigcap_{k = 1}^{\infty} \overline{\bigcup_{m = k}^{\infty} \{x \in \D_m \mid g_m(x) \in F\}}\)</span> をとると, 「任意の <span class="math inline">\(k \geq 1 \in \mathbb{N}\)</span> に対して, <span class="math inline">\(x \in \overline{\bigcup_{m = k}^{\infty} \{x \in \D_m \mid g_m(x) \in F\}}\)</span>」である. 閉包の性質より, <span class="math inline">\(a\in \overline{M}\)</span> ならば, 任意の <span class="math inline">\(\varepsilon &gt; 0\)</span> に対して, <span class="math inline">\(B(a;\varepsilon) \cap M \neq \emptyset\)</span> が成り立つので, 上の命題を言い換えると次のようになる. <span class="math display">\[
 \forall k \geq 1,
 \forall \varepsilon &gt; 0, \,
 B(x; \varepsilon) \cap (\bigcup_{m = k}^{\infty} \{x \in \D_m \mid g_m(x) \in F\}) \neq \emptyset
 \]</span> つまり, 任意の <span class="math inline">\(k\geq 1\)</span>, <span class="math inline">\(\varepsilon &gt; 0\)</span> に対して, ある <span class="math inline">\(m_k \geq k \in \mathbb{N}\)</span> が存在して, <span class="math inline">\(x_{m_k} \in g_{m_k}^{-1}(F)\)</span> かつ, <span class="math inline">\(d(x_{m_k}, x) &lt; \varepsilon (= 1/k)\)</span> が成り立つ（<span class="math inline">\(\varepsilon\)</span> は任意なので <span class="math inline">\(1 / k\)</span> に置き換えてもよい）ような <span class="math inline">\(x_{m_k}\)</span>, <span class="math inline">\(x\)</span> が存在する. したがって, <span class="math inline">\(k\to\infty\)</span> のとき, <span class="math inline">\(m_k\to\infty\)</span> であり, <span class="math inline">\(x_{m_k}\to x\)</span> となる.</p>
 <p><span class="math inline">\(x\in\D_0\)</span> のとき, 仮定より <span class="math inline">\(g_{m_k}(x_{m_k}) \to g_0(x)\)</span> が成り立つ. <span class="math inline">\(g_{m_k}(x_{m_k}) \in F\)</span> と <span class="math inline">\(F\)</span> が閉であることから, <span class="math inline">\(g_0(x) \in F\)</span>.</p>
-<p>あるいは, <span class="math inline">\(x\notin\D_0\)</span> であるため, <a href="#eq-inc-closure" class="quarto-xref">Equation 10</a> が成り立つことが分かる.</p>
-<p><span class="math inline">\(g_m\)</span> は連続とは限らないので, <span class="math inline">\(g_m^{-1}(F)\)</span> は閉とは限らない. そこで, 閉包をとると, 閉集合となるため, <a href="#lem-portmanteau" class="quarto-xref">Lemma 15</a> の4. が使える. <span class="math inline">\(k\)</span> を固定すると, <span class="math display">\[
+<p>あるいは, <span class="math inline">\(x\notin\D_0\)</span> であるため, <a href="#eq-inc-closure" class="quarto-xref">Equation 9</a> が成り立つことが分かる.</p>
+<p><span class="math inline">\(g_m\)</span> は連続とは限らないため, <span class="math inline">\(g_m^{-1}(F)\)</span> は閉とは限らないが, 閉包をとれば <a href="#lem-portmanteau" class="quarto-xref">Lemma 16</a> の4. が使える. <span class="math inline">\(k\)</span> を固定すると, <span class="math display">\[
 \begin{align*}
   \text{LHS}
-  &amp;= \limsup_{n\to\infty} P^{\ast} (g_n(X_n) \in F) \\
+  &amp;\coloneqq \limsup_{n\to\infty} P^{\ast} (g_n(X_n) \in F) \\
   &amp;= \limsup_{n\to\infty} P^{\ast} (X_n \in \{x \in \D_n \mid g_n(x) \in F\}) \\
   &amp;\leq \limsup_{n\to\infty} P^{\ast} (X_n \in \bigcup_{m = k}^{\infty} \{x \in \D_m \mid g_m(x) \in F\}) \\
   &amp;[\because k \, は固定されているので, k\leq n \, となるように \, n \, をとれる.] \\
@@ -4538,10 +4614,10 @@ B(x; \varepsilon) \cap (\bigcup_{m = k}^{\infty} \{x \in \D_m \mid g_m(x) \in F\
   &amp;= P(X \in \bigcap_{k = 1}^{\infty} A_k) \\
   &amp;\leq P(g_0(X) \in F)
 \end{align*}
-\]</span> ただし, 最後の不等式は包含関係 <a href="#eq-inc-closure" class="quarto-xref">Equation 10</a> から成り立つ. 結果, 以下の不等式 <span class="math display">\[
+\]</span> ただし, 最後の不等式は包含関係 <a href="#eq-inc-closure" class="quarto-xref">Equation 9</a> から成り立つ. 結果, 以下の不等式 <span class="math display">\[
 \limsup_{n\to\infty} P^{\ast} (g_n(X_n) \in F)
 \leq P(g_0(X) \in F)
-\]</span> が成り立つので, <a href="#lem-portmanteau" class="quarto-xref">Lemma 15</a> の 4. より, <span class="math display">\[
+\]</span> が成り立つので, <a href="#lem-portmanteau" class="quarto-xref">Lemma 16</a> の 4. より, <span class="math display">\[
 X_n \leadsto X \Rightarrow g_n (X_n) \leadsto g_0 (X)
 \]</span></p>
 <ul>
@@ -4583,8 +4659,31 @@ P(\lim g(X_n) = g(X))
 <p><span class="math inline">\(h_n(\omega) \downarrow 0\)</span> より, <span class="math display">\[
 \forall \varepsilon &gt;0, \exists n_0 \in \mathbb{N}, \forall n \geq n_0, \quad h_n(\omega) &lt; \varepsilon
 \]</span> ここで, <span class="math inline">\(0\leq F(\omega)\)</span> より, <span class="math display">\[
-h_n(\omega) \leq F(\omega) \varepsilon
+h_n(\omega) \leq F(\omega) + \varepsilon
 \]</span> 右辺は可測なので, <span class="math inline">\(\Delta_n&#39;\)</span> の定義から, <span class="math inline">\(\Delta_n&#39; \leq F(\omega) + \varepsilon\)</span> となる. ゆえに, <span class="math inline">\(\lim_n \Delta_n&#39; = F(\omega)\)</span> が示された.</p>
+</div>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-asymptotically-tight-measurable" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 11 (<span class="citation" data-cites="vaart1998">van der Vaart (<a href="#ref-vaart1998" role="doc-biblioref">1998</a>)</span> p.260)</strong></span>  </p>
+<hr>
+<ul>
+<li><p>（可測とは限らない）写像列 <span class="math inline">\(X_n:\Omega_n \to \D\)</span> が漸近的にタイト（asymptotically tight）であるとは, 任意の <span class="math inline">\(\varepsilon &gt; 0\)</span> に対して, あるコンパクト集合 <span class="math inline">\(K\)</span> が存在して, 任意の <span class="math inline">\(\delta &gt; 0\)</span> に対して <span class="math display">\[
+\limsup_{n\to\infty} P^\ast(X_n \notin K^\delta) &lt; \varepsilon
+\]</span> が成り立つことをいう. ただし, <span class="math display">\[
+K^\delta \coloneqq \{ y \mid d(y, K) &lt; \delta \}
+\]</span> である.</p></li>
+<li><p>（可測とは限らない）写像列 <span class="math inline">\(X_n:\Omega_n \to \D\)</span> が漸近的に可測（asymptotically measurable）であるとは, すべての有界連続関数 <span class="math inline">\(f\)</span> に対して, <span class="math inline">\(n\to\infty\)</span> としたとき, <span class="math display">\[
+E^\ast[f(X_n)] - E_\ast[f(X_n)] \to 0
+\]</span> が成り立つことをいう.</p></li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div class="callout callout-style-simple callout-important no-icon">
 <div class="callout-body d-flex">
@@ -4604,13 +4703,16 @@ h_n(\omega) \leq F(\omega) \varepsilon
 </div>
 </div>
 </div>
+<ul>
+<li>証明は <span class="citation" data-cites="vaart1996">van der Vaart and Wellner (<a href="#ref-vaart1996" role="doc-biblioref">1996</a>)</span> p21-参照.</li>
+</ul>
 </section>
 <section id="有界確率過程" class="level2">
 <h2 class="anchored" data-anchor-id="有界確率過程">18.3 有界確率過程</h2>
 <ul>
 <li><p>確率過程 <span class="math inline">\(\{X_t\}_{t\in T}\)</span> とは, 任意の添え字集合 <span class="math inline">\(T\)</span> で添え字付けられ, かつ, 確率空間 <span class="math inline">\((\Omega, \mathcal{U}, P)\)</span> 上で定義された確率変数 <span class="math inline">\(X_t:\Omega\to\mathbb{R}\)</span> の集合である. <!-- TODO: 値域はＤではないのか?　--></p></li>
 <li><p><span class="math inline">\(\omega\)</span> を固定するごとに, 写像 <span class="math inline">\(\omega\mapsto X_t(\omega)\)</span> を標本関数や見本関数、サンプルパス（sample path）という. <span class="math inline">\(X\)</span> をランダム関数と見て, その実現値がサンプルパスであると考えるとよい.</p></li>
-<li><p><span class="math inline">\(T=[a, b]\)</span> として, すべてのサンプルパスが連続（or càdlàg or 有界）関数ならば, <span class="math inline">\(X:\Omega\to C[a, b](or D[a, b] or \ell^\infty[a, b])\)</span> と見ることができる.</p></li>
+<li><p><span class="math inline">\(T=[a, b]\)</span> として, すべてのサンプルパスが連続（or càdlàg or 有界）関数ならば, <span class="math inline">\(X:\Omega\to C[a, b](\text{or } D[a, b] \text{ or } \ell^\infty[a, b])\)</span> と見ることができる.</p></li>
 <li><p><a href="#lem-continuous-cadlag-bounded" class="quarto-xref">Lemma 7</a> より, <span class="math inline">\(C[a, b] \subset D[a, b] \subset \ell^\infty[a, b]\)</span> なので, 値を <span class="math inline">\(C[a, b]\)</span> にとる写像列の弱収束を考えるときに, <span class="math inline">\(C[a, b]\)</span>, <span class="math inline">\(D[a, b]\)</span>, <span class="math inline">\(\ell^\infty[a, b]\)</span> のいずれで考えても構わない. 次の補題は, 同じ距離を誘導するノルム（例えば一様ノルム）を考える限り, <span class="math inline">\(C[a, b]\)</span>, <span class="math inline">\(D[a, b]\)</span>, <span class="math inline">\(\ell^\infty[a, b]\)</span> のどの空間で弱収束を考えても違いが生じないことを示す.</p></li>
 </ul>
 <div class="callout callout-style-simple callout-warning no-icon">
@@ -4620,7 +4722,7 @@ h_n(\omega) \leq F(\omega) \varepsilon
 </div>
 <div class="callout-body-container">
 <div id="lem-subset-metric" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 17 (<span class="citation" data-cites="vaart1998">van der Vaart (<a href="#ref-vaart1998" role="doc-biblioref">1998</a>)</span> Theorem 18.13)</strong></span>  </p>
+<p><span class="theorem-title"><strong>Lemma 18 (<span class="citation" data-cites="vaart1998">van der Vaart (<a href="#ref-vaart1998" role="doc-biblioref">1998</a>)</span> Theorem 18.13)</strong></span>  </p>
 <hr>
 <p>距離空間 <span class="math inline">\(\D\)</span> に対して, 任意の部分集合 <span class="math inline">\(\D_0 \subset \D\)</span> をとり, <span class="math inline">\(\D_0\)</span> は <span class="math inline">\(\D\)</span> と同じ距離を備えているとする. <span class="math inline">\(X\)</span> および各 <span class="math inline">\(\{X_n\}_{n\geq 1}\)</span> が <span class="math inline">\(\D_0\)</span> に値をとるならば, <span class="math inline">\(\D_0\)</span> 上の写像としての <span class="math inline">\(X_n \leadsto X\)</span> と, <span class="math inline">\(\D\)</span> 上の写像としての <span class="math inline">\(X_n \leadsto X\)</span> は同値.</p>
 </div>
@@ -4630,7 +4732,7 @@ h_n(\omega) \leq F(\omega) \varepsilon
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><br>
 <span class="math inline">\(\D_0\)</span> の開集合 <span class="math inline">\(G_0\)</span> は, <span class="math inline">\(\D\)</span> の開集合 <span class="math inline">\(G\)</span> を用いて <span class="math inline">\(G_0 = G \cap \D_0\)</span> と表される.</p>
-<p><span class="math inline">\(\D\)</span> 上の写像として <span class="math inline">\(X_n\leadsto X\)</span> なので, <a href="#lem-portmanteau" class="quarto-xref">Lemma 15</a> の3より, 任意の開集合 <span class="math inline">\(G\subset\D\)</span> に対して <span class="math display">\[
+<p><span class="math inline">\(\D\)</span> 上の写像として <span class="math inline">\(X_n\leadsto X\)</span> なので, <a href="#lem-portmanteau" class="quarto-xref">Lemma 16</a> の3より, 任意の開集合 <span class="math inline">\(G\subset\D\)</span> に対して <span class="math display">\[
 \liminf P^\ast (X_n \in G) \geq P(X \in G)
 \]</span> が成り立つ. ここで, <span class="math inline">\(\{X_n\}_{n\geq 1}\)</span>, <span class="math inline">\(X\)</span> はともに <span class="math inline">\(\D_0\)</span> に値をとるので <span class="math display">\[
 P^\ast (X_n \in G_0) = P^\ast (X_n \in G \cap \D_0) = P^\ast (X_n \in G)
@@ -4641,7 +4743,7 @@ P(X \in G_0) = P(X \in G \cap D_0) = P(X \in G)
 \]</span> が成り立って, この2つの不等式は同値.</p>
 </div>
 <ul>
-<li>したがって, 以降は <span class="math inline">\(\ell^\infty(T)\)</span> における弱収束について考える. <a href="#lem-subset-metric" class="quarto-xref">Lemma 17</a> より, <span class="math inline">\(C(T)\)</span>, <span class="math inline">\(D(T)\)</span> における弱収束を考えているのと同値であるためである.</li>
+<li>したがって, 以降は <span class="math inline">\(\ell^\infty(T)\)</span> における弱収束について考える. <a href="#lem-subset-metric" class="quarto-xref">Lemma 18</a> より, <span class="math inline">\(C(T)\)</span>, <span class="math inline">\(D(T)\)</span> における弱収束を考えているのと同値であるためである.</li>
 </ul>
 <div class="callout callout-style-simple callout-important no-icon">
 <div class="callout-body d-flex">
@@ -4666,15 +4768,15 @@ P(X \in G_0) = P(X \in G \cap D_0) = P(X \in G)
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><br>
 十分性, つまり条件 1, 2 が成り立つならば, 任意の写像列 <span class="math inline">\(X_n: \Omega_n \to \ell^{\infty} (T)\)</span> が, タイトな確率要素に弱収束することを示す.</p>
-<p>任意の <span class="math inline">\(m\in\mathbb{N}\)</span> を固定して, 条件2に対応する <span class="math inline">\(\varepsilon = \eta = 2^{-m}\)</span> として, <span class="math inline">\(T\)</span> を有限個の集合 <span class="math inline">\(T_1^m, \ldots, T_{k_m}^m\)</span> に分割する. <span class="math inline">\(T\)</span> の分割が細かくなると, 条件 2 の確率は減少する. 一般性を失わずに, <span class="math inline">\(m\)</span> がふえると分割は細かくなっていくと仮定する.</p>
+<p>任意の <span class="math inline">\(m\in\mathbb{N}\)</span> を固定して, 条件2に対応する <span class="math inline">\(\varepsilon = \eta = 2^{-m}\)</span> として, <span class="math inline">\(T\)</span> を有限個の集合 <span class="math inline">\(T_1^m, \ldots, T_{k_m}^m\)</span> に分割する. <span class="math inline">\(T\)</span> の分割が細かくなると, 条件 2 の左辺の外確率は減少する. 一般性を失わずに, <span class="math inline">\(m\)</span> がふえると分割は細かくなっていくと仮定する.</p>
 <p>固定した <span class="math inline">\(m\)</span> に対して, 空間 <span class="math inline">\(T\)</span> における擬距離 <span class="math inline">\(\rho_m\)</span> を次のように定義する. 任意の <span class="math inline">\(s, t \in T\)</span> について <span class="math display">\[
 \rho_m(s, t)
 = \begin{cases}
   0  &amp;  \text{if } \, \exists j \in {1, ..., k_m} \quad \text{s.t.} \quad s \in T_j^m, t \in T_j^m \\
   1  &amp;  \text{otherwise}
 \end{cases}
-\]</span> <span class="math inline">\(\rho_m\)</span>-開球 <span class="math inline">\(B_{\rho_m}(a;\varepsilon) = \{x \mid \rho_m(a, x) &lt; 2^{-m}\}\)</span> を考えると, これは集合の分割に対応している. つまり, 任意の2点が同じ分割 <span class="math inline">\(T_j\)</span> に属するか否かと, 同じ <span class="math inline">\(\rho_m\)</span>-開球に属するか否かは同値である. このとき, 有限個の <span class="math inline">\(\rho_m\)</span>-開球で <span class="math inline">\(T\)</span> が被覆されているため, <span class="math inline">\(T\)</span> は擬距離 <span class="math inline">\(\rho_m\)</span> に関して全有界である. また, 各分割 <span class="math inline">\(T_j^m\)</span> の <span class="math inline">\(\rho_m\)</span>-直径は <span class="math display">\[
-\delta_{\rho_m}(T_j^m) = \sup \{ \rho_m(x, y) \mid x, y \in T_j^m \} = 0
+\]</span> <span class="math inline">\(\rho_m\)</span>-開球 <span class="math inline">\(B_{\rho_m}(a;\varepsilon) \coloneqq \{x \mid \rho_m(a, x) &lt; 2^{-m}\}\)</span> を考えると, これは集合の分割に対応している. つまり, 任意の2点が同じ分割 <span class="math inline">\(T_j\)</span> に属するか否かと, 同じ <span class="math inline">\(\rho_m\)</span>-開球に属するか否かは同値である. このとき, 有限個の <span class="math inline">\(\rho_m\)</span>-開球で <span class="math inline">\(T\)</span> が被覆されているため, <span class="math inline">\(T\)</span> は擬距離 <span class="math inline">\(\rho_m\)</span> に関して全有界である. また, 各分割 <span class="math inline">\(T_j^m\)</span> の <span class="math inline">\(\rho_m\)</span>-直径は <span class="math display">\[
+\delta_{\rho_m}(T_j^m) \coloneqq \sup \{ \rho_m(x, y) \mid x, y \in T_j^m \} = 0
 \]</span> である.</p>
 <p>分割を入れ子状にしていくことで, <span class="math inline">\(\rho_1 \leq \rho_2 \leq \dots\)</span> とできる. <span class="math display">\[
 \rho(s, t)
@@ -4682,7 +4784,7 @@ P(X \in G_0) = P(X \in G \cap D_0) = P(X \in G)
 \]</span> と定義すると, <span class="math inline">\(\rho\)</span> もまた擬距離であり, 各分割 <span class="math inline">\(T_j^m\)</span> の <span class="math inline">\(\rho\)</span>-直径は <span class="math display">\[
 \delta_{\rho}(T_j^m)
 = \sup \{ \sum_{m = 1}^\infty 2^{-m} \rho_m(x, y) \mid x, y \in T_j^m \}
-= \sum_{k = m+1}^\infty 2^{-k}
+\leq \sum_{k = m+1}^\infty 2^{-k}
 = 2^{-m}
 \]</span> したがって任意の <span class="math inline">\(\varepsilon &gt; 0\)</span> に対して, ある <span class="math inline">\(m\)</span> が存在して <span class="math inline">\(2^{-m} &lt; \varepsilon\)</span> とできて, 有限個の <span class="math inline">\(\rho\)</span>-開球で <span class="math inline">\(T\)</span> を覆うことができるため, <span class="math inline">\(T\)</span> は擬距離 <span class="math inline">\(\rho\)</span> に関しても全有界である. 部分集合 <span class="math inline">\(T_0\)</span> を, 各分割 <span class="math inline">\(T_j^m\)</span> から任意の1点 <span class="math inline">\(t_j^m\)</span> をとってきて構成すると, 高々可算で <span class="math inline">\(\rho\)</span>-稠密である.</p>
 <p>条件 1 と, <a href="#thm-kolmogorov-consistency-theorem" class="quarto-xref">Theorem 5</a> より, 各点 <span class="math inline">\(t_1, ..., t_k \in T_0\)</span> において, <span class="math display">\[
@@ -4704,24 +4806,28 @@ P(X \in G_0) = P(X \in G \cap D_0) = P(X \in G)
 P \left(\sup_{\substack{\rho(s, t) &lt; 2^{-m} \\ s, t \in T_0}} |X_{s} - X_{t}| &gt; 2^{-m}\right)
 \leq 2^{-m}
 \]</span></p>
-<p><span class="math inline">\(\sum_{m = 1}^\infty 2^{-m} = 1 &lt; \infty\)</span> なので, Borel-Cantelliの補題が使えて, ほとんどすべての <span class="math inline">\(\omega\)</span> および十分に大きな <span class="math inline">\(m\)</span> と, <span class="math inline">\(\rho(s, t) &lt; 2^{-m}\)</span> なる任意の <span class="math inline">\(s\)</span>, <span class="math inline">\(t\)</span> に対して <span class="math display">\[
+<p><span class="math inline">\(\sum_{m = 1}^\infty 2^{-m} = 1 &lt; \infty\)</span> なので, Borel-Cantelliの補題が使えて, ほとんどいたるところすべての <span class="math inline">\(\omega\)</span> について, 十分に大きな <span class="math inline">\(m\)</span> と, <span class="math inline">\(\rho(s, t) &lt; 2^{-m}\)</span> なる任意の <span class="math inline">\(s\)</span>, <span class="math inline">\(t\)</span> に対して <span class="math display">\[
 \begin{align*}
   &amp;P \left(\limsup_m \sup_{\substack{\rho(s, t) &lt; 2^{-m} \\ s, t \in T_0}} |X_{s}(\omega) - X_{t}(\omega)| &gt; 2^{-m}\right) = 0 \\
   &amp;\Leftrightarrow |X_s(\omega) - X_t(\omega)| \leq 2^{-m}
 \end{align*}
-\]</span> が成り立つ. これは, <span class="math inline">\(\{X_t\}_{t \in T_0}\)</span> のほとんどすべてのサンプルパスが <span class="math inline">\(UC(T_0, \rho)\)</span> に含まれることを意味する. <!-- TODO: 以下--> 確率過程 <span class="math inline">\(\{X_t\}_{t \in T_0}\)</span> は連続性より, ほとんどすべてのサンプルパスが <span class="math inline">\(UC(T, \rho)\)</span> に含まれる確率過程 <span class="math inline">\(\{X_t\}_{t \in T}\)</span> に拡張できる. <span class="math inline">\(UC(T, \rho)\)</span> は完備かつ可分なので, <span class="math inline">\(\{X_t\}_{t \in T}\)</span> はボレル可測でタイトである. <!-- TODO: 以上--></p>
-<p>写像 <span class="math inline">\(\pi_m:T\to T\)</span> を, 各分割 <span class="math inline">\(T_j^m\)</span> に含まれる点からその分割の代表点 <span class="math inline">\(t_j^m\)</span> への写像と定義する. <span class="math inline">\(X\)</span> の一様連続性と, <span class="math inline">\(T_j^m\)</span> の直径が <span class="math inline">\(2^{-m}\)</span> 以下であることから, <span class="math inline">\(m \to \infty\)</span> のとき, <span class="math inline">\(X \circ \pi_m \leadsto X \in \ell^\infty(T)\)</span> が成り立つ. 確率過程 <span class="math inline">\(\{X_n \circ \pi_m\}_{t\in T}\)</span> は <span class="math inline">\(k_m\)</span> 次元ベクトルと同一視できて, 条件1より, 任意の <span class="math inline">\(m\)</span> を固定するたびに, <span class="math inline">\(n\to\infty\)</span> のとき, <span class="math inline">\(X_n \circ \pi_m \leadsto X \circ \pi_m \in \ell^\infty(T)\)</span> が成り立つ. 以上より, 任意のリプシッツ関数 <span class="math inline">\(f:\ell^\infty(T)\to [0, 1]\)</span> に対して, <span class="math inline">\(n\to\infty\)</span> とした後に <span class="math inline">\(m\to\infty\)</span> としたとき, <span class="math inline">\(E^\ast [f(X_n \circ \pi_m)] \to E[f(X)]\)</span> が成り立つ.</p>
-<p>任意の <span class="math inline">\(\varepsilon &gt; 0\)</span> に対して, <span class="math display">\[
+\]</span> が成り立つ. これは, <span class="math inline">\(\{X_t\}_{t \in T_0}\)</span> のサンプルパスが <span class="math inline">\(P\)</span>-aeで <span class="math inline">\(UC(T_0, \rho)\)</span> に含まれることを意味する. <!-- TODO: 以下--> 確率過程 <span class="math inline">\(\{X_t\}_{t \in T_0}\)</span> は連続性より, ほとんどすべてのサンプルパスが <span class="math inline">\(UC(T, \rho)\)</span> に含まれる確率過程 <span class="math inline">\(\{X_t\}_{t \in T}\)</span> に拡張できる. <a href="#lem-uc-separable" class="quarto-xref">Lemma 13</a> より, <span class="math inline">\(UC(T, \rho)\)</span> は<u>完備</u>（未証明）かつ可分なので(Polish空間になっていて), <span class="math inline">\(\{X_t\}_{t \in T}\)</span> は,<u>ボレル可測</u>（未証明）でタイトである. <!-- TODO: 以上--></p>
+<p>写像 <span class="math inline">\(\pi_m:T\to T\)</span> を, 各分割 <span class="math inline">\(T_j^m\)</span> に含まれるすべての点からその分割の代表点 <span class="math inline">\(t_j^m\)</span> への写像と定義する. <span class="math inline">\(X\)</span> の一様連続性と, <span class="math inline">\(T_j^m\)</span> の直径が <span class="math inline">\(2^{-m}\)</span> 以下であることから, <span class="math display">\[
+\| X(\omega) - X(\omega) \circ \pi_m \|_T
+= \sup_{t\in T} | X(\omega) - X(\omega) \circ \pi_m |
+\leq 2^{-m}
+\]</span> なので, <span class="math inline">\(m \to \infty\)</span> のとき, <span class="math inline">\(X \circ \pi_m \leadsto X \in \ell^\infty(T)\)</span> が成り立つ. 確率過程 <span class="math inline">\(\{X_n \circ \pi_m\}_{t\in T}\)</span> は <span class="math inline">\(k_m\)</span> （代表点の個数）次元ベクトルと同一視できて, 条件1より, 任意の <span class="math inline">\(m\)</span> を固定するたびに, <span class="math inline">\(n\to\infty\)</span> のとき, <span class="math inline">\(X_n \circ \pi_m \leadsto X \circ \pi_m \in \ell^\infty(T)\)</span> が成り立つ. 以上より, 任意の有界リプシッツ関数 <span class="math inline">\(f:\ell^\infty(T)\to\mathbb{R}\)</span> に対して, <span class="math inline">\(n\to\infty\)</span> とした後に <span class="math inline">\(m\to\infty\)</span> としたとき, <span class="math inline">\(E^\ast [f(X_n \circ \pi_m)] \to E[f(X)]\)</span> が成り立つ.</p>
+<p>任意の <span class="math inline">\(\varepsilon &gt; 0\)</span> と任意の有界リプシッツ関数（<span class="math inline">\(\| f \|_T \leq M\)</span> とする）に対して, <span class="math display">\[
 \begin{align*}
   | E^\ast [f(X_n)] - E[f(X)] |
   &amp;\leq | E^\ast [f(X_n)] - E^\ast [f(X_n \circ \pi_m)] | + | E^\ast [f(X_n \circ \pi_m)] - E[f(X)] | \\
   &amp;\leq | E^\ast [f(X_n)] - E^\ast [f(X_n \circ \pi_m)] | + o(1) \\
   &amp;\leq  E^\ast [| f(X_n) - f(X_n \circ \pi_m) |] + o(1) \\
-  &amp;\leq  E^\ast [\min \{ \| f \|_\text{lip} \| X_n - X_n \circ \pi_m \|_T, 1 \}] + o(1) \\
-  &amp;\leq  E^\ast [\| f \|_\text{lip} \varepsilon + \Large\mathbb{1}_{\normalsize \{\| X_n - X_n \circ \pi_m \|_T &gt; \varepsilon\}} \normalsize] + o(1) \\
-  &amp;\leq \| f \|_{\text{lip}} \varepsilon + P^\ast (\| X_n - X_n \circ \pi_m \|_T &gt; \varepsilon) + o(1)
+  &amp;\leq  E^\ast [\min \{ \| f \|_\text{lip} \| X_n - X_n \circ \pi_m \|_T, 2M \}] + o(1) \\
+  &amp;\leq  E^\ast [\| f \|_\text{lip} \varepsilon + 2M \Large\mathbb{1}_{\normalsize \{\| X_n - X_n \circ \pi_m \|_T &gt; \varepsilon\}} \normalsize] + o(1) \\
+  &amp;\leq \| f \|_{\text{lip}} \varepsilon + 2M P^\ast (\| X_n - X_n \circ \pi_m \|_T &gt; \varepsilon) + o(1)
 \end{align*}
-\]</span> <span class="math inline">\(\varepsilon = 2^{-m}\)</span> とすることで, <span class="math inline">\(\| f \|_{\text{lip}} \varepsilon + 2^{-m} + o(1)\)</span> で抑えることができて, <span class="math inline">\(X_n \leadsto X\)</span> が示された.</p>
+\]</span> <span class="math inline">\(\varepsilon = 2^{-m}\)</span> とすることで, <span class="math inline">\(\| f \|_{\text{lip}} 2^{-m} + 2M 2^{-m} + o(1)\)</span> で抑えることができて, <span class="math inline">\(X_n \leadsto X\)</span> が示された.</p>
 </div>
 <div class="callout callout-style-simple callout-important no-icon">
 <div class="callout-body d-flex">
@@ -4751,7 +4857,7 @@ P(\{\omega \mid \zeta_{t_1} \leq x_1, ..., \zeta_{t_n} \leq x_n\})
 </div>
 <div class="callout-body-container">
 <div id="lem-sample-path-uc" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 18 (<span class="citation" data-cites="vaart1998">van der Vaart (<a href="#ref-vaart1998" role="doc-biblioref">1998</a>)</span> Lemma 18.15)</strong></span>  </p>
+<p><span class="theorem-title"><strong>Lemma 19 (<span class="citation" data-cites="vaart1998">van der Vaart (<a href="#ref-vaart1998" role="doc-biblioref">1998</a>)</span> Lemma 18.15)</strong></span>  </p>
 <hr>
 <p><a href="#thm-stochastic-convergence" class="quarto-xref">Theorem 4</a> の条件1, 2 の下で, 全有界な <span class="math inline">\(T\)</span> に関して擬距離 <span class="math inline">\(\rho\)</span> が存在して, 弱収束先がほとんどすべてのサンプルパスが <span class="math inline">\(UC(T, \rho)\)</span> に入るような列 <span class="math inline">\(X_n\)</span> が構成できる. <!-- TODO: 訳めちゃくちゃ--> さらに, 平均 <span class="math inline">\(0\)</span> のガウス分布に弱収束するなら, 擬距離 <span class="math inline">\(\rho\)</span> は <span class="math inline">\(\rho(s, t) = \text{sd}(X_s, X_t)\)</span> となるように取れる.</p>
 </div>
@@ -4768,7 +4874,9 @@ P(\{\omega \mid \zeta_{t_1} \leq x_1, ..., \zeta_{t_n} \leq x_n\})
 </div>
 <div class="callout-body-container">
 <div id="lem-pseudometric-metric" class="theorem lemma">
-<p><span class="theorem-title"><strong>Lemma 19</strong></span> 擬距離空間 <span class="math inline">\((T, \rho)\)</span> を考える. <span class="math inline">\(x, y \in T\)</span> に対して, <span class="math display">\[
+<p><span class="theorem-title"><strong>Lemma 20</strong></span>  </p>
+<hr>
+<p>擬距離空間 <span class="math inline">\((T, \rho)\)</span> を考える. <span class="math inline">\(x, y \in T\)</span> に対して, <span class="math display">\[
 x \sim y \Leftrightarrow \rho(x, y) = 0
 \]</span> なる同値関係を定めて, 商集合 <span class="math inline">\(T / \sim = \{[x] \mid x \in T\}\)</span> を考える. <span class="math display">\[
 d([x], [y]) = \rho(x, y)
@@ -4800,6 +4908,29 @@ d([x], [y]) = 0
 \leq \rho(x, y) + \rho(y, y&#39;) = \rho(x, y)
 \]</span> 以上より, <span class="math inline">\(\rho(x, y) = \rho(x&#39;, y&#39;)\)</span> なので, <span class="math inline">\(d([x], [y])\)</span> は代表元の取り方によらず, 一意に定まる.</p>
 </div>
+<div class="callout callout-style-simple callout-warning no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="lem-sup-dense" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 21</strong></span>  </p>
+<hr>
+<p><span class="math inline">\(x \in C[a, b]\)</span> に対して, <span class="math display">\[
+\sup_{t \in [a, b]} | x(t) | = \sup_{r \in [a, b] \cap \mathbb{Q}} | x(r) |
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><br>
+<span class="math inline">\(M \coloneqq \sup_{t \in [a, b]} | x(t) |\)</span> とおくと, 任意の <span class="math inline">\(\varepsilon &gt; 0\)</span> に対して, ある <span class="math inline">\(t&#39;\in [a, b]\)</span> が存在して, <span class="math inline">\(|x(t&#39;)| &gt; M - \varepsilon\)</span> とできる. 連続性より, ある <span class="math inline">\(\delta &gt; 0\)</span> が存在して, <span class="math inline">\(|t - t&#39;| &lt; \delta\)</span> ならば, <span class="math inline">\(| x(t) - x(t&#39;) | &lt; \varepsilon\)</span> が成り立つ. 有理数の稠密性より, <span class="math inline">\(|r - t&#39;| &lt; \delta\)</span> となるような <span class="math inline">\(r \in [a, b] \cap \mathbb{Q}\)</span> がとれて, <span class="math display">\[
+|x(r)| &gt; |x(t&#39;)| - \varepsilon &gt; M - 2 \varepsilon
+\]</span> したがって, <span class="math inline">\(\sup_{r \in [a, b] \cap \mathbb{Q}} | x(r) | &gt; M - 2 \varepsilon\)</span> であり, <span class="math inline">\(\varepsilon \to 0\)</span> として, <span class="math inline">\(\sup_{r \in [a, b] \cap \mathbb{Q}} | x(r) | \geq M\)</span> が得られる.</p>
+<p>逆の不等号は明らか.</p>
+</div>
 </section>
 <section id="演習問題" class="level2">
 <h2 class="anchored" data-anchor-id="演習問題">演習問題</h2>
@@ -4824,7 +4955,8 @@ d([x], [y]) = 0
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><br>
 1. コンパクト <span class="math inline">\(\Rightarrow\)</span> 全有界</p>
-<p>任意の <span class="math inline">\(\varepsilon &gt; 0\)</span> に対して <span class="math inline">\(\bigcup_{x \in A} B(x; \varepsilon)\)</span> は <span class="math inline">\(A\)</span> の開被覆であり, コンパクト性より有限部分被覆 <span class="math inline">\(\bigcup_{i = 1}^n B(x_i; \varepsilon)\)</span> がとれるため, <span class="math inline">\(A\)</span> は全有界である.<br>
+<p>任意の <span class="math inline">\(\varepsilon &gt; 0\)</span> に対して <span class="math inline">\(\bigcup_{x \in A} B(x; \varepsilon)\)</span> は <span class="math inline">\(A\)</span> の開被覆であり, コンパクト性より有限部分被覆 <span class="math inline">\(\bigcup_{i = 1}^n B(x_i; \varepsilon)\)</span> がとれるため, <span class="math inline">\(A\)</span> は全有界である.</p>
+<p><br>
 2. コンパクト <span class="math inline">\(\Rightarrow\)</span> 可分</p>
 <p>1.の結果より, 任意の <span class="math inline">\(n\in\mathbb{N}\)</span> に対して, <span class="math inline">\(A\)</span> の有限部分被覆 <span class="math inline">\(\bigcup_{i = 1}^n B(x_i; 1 / n)\)</span> がとれる. 一般性を失わなずに各開球は空でないと考えることができて, 元 <span class="math inline">\(b_i \in B(x_i; 1 / n)\)</span> を1つだけとってきて, <span class="math inline">\(M_n = \{b_1, \ldots, b_n\}\)</span> を作る. <span class="math display">\[
 M = \bigcup_{n = 1}^\infty M_n
@@ -4861,6 +4993,50 @@ a \in B(a; \varepsilon) \cap B(x_i; 1 / n) \subset O \cap M
 </div>
 </div>
 </div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><br>
+座標射影は写像 <span class="math inline">\(\pi_t: C[a, b] \to \mathbb{R}\)</span> と考えられる. 座標射影によって生成される <span class="math inline">\(\sigma\)</span>-加法族とは, <span class="math inline">\(\pi_t\)</span> を可測にするような, 空間 <span class="math inline">\(C[a, b]\)</span> における最小の <span class="math inline">\(\sigma\)</span>-加法族であり, これを <span class="math inline">\(\sigma[\pi_t]\)</span> で表す.</p>
+<p>一様ノルムによって生成される空間 <span class="math inline">\(C[a, b]\)</span> 上のボレル集合体を <span class="math inline">\(\mathscr{B}(C[a, b])\)</span> で表す.</p>
+<ul>
+<li><span class="math inline">\(\sigma[\pi_t] \subset \mathscr{B}(C[a, b])\)</span> を示す.</li>
+</ul>
+<p><span class="math inline">\(z, w \in C[a, b]\)</span> に対して, <span class="math display">\[
+| \pi_t(z) - \pi_t(w) |
+= | z(t) - w(t) |
+\leq \sup_{t\in[a, b]} | z(t) - w(t) |
+= \| z - w \|_{[a, b]}
+\]</span> が成り立つため, （リプシッツ）連続である. <a href="#lem-continuous-borel" class="quarto-xref">Lemma 2</a> より, <span class="math inline">\(\pi_t\)</span> は可測であり, 最小性より <span class="math inline">\(\sigma[\pi_t] \subset \mathscr{B}(C[a, b])\)</span> が成り立つ.</p>
+<ul>
+<li><span class="math inline">\(\mathscr{B}(C[a, b]) \subset \sigma[\pi_t]\)</span> を示す.</li>
+</ul>
+<p><span class="math inline">\(C[a, b]\)</span> に含まれる任意の開集合が <span class="math inline">\(\sigma[\pi_t]\)</span> に含まれることを示せばよいが, すべての開集合を調べるのは大変なので, <span class="math inline">\(C[a, b]\)</span> の開基を構成して, その元が <span class="math inline">\(\sigma[\pi_t]\)</span> に含まれることを示す.</p>
+<p>まず <span class="math inline">\(C[a, b]\)</span> の開基として, 可算な開球族を構成する. <a href="#lem-continuous-separable" class="quarto-xref">Lemma 9</a> より, 高々可算で稠密な部分集合 <span class="math inline">\(M \subset C[a, b]\)</span> がとれる. <span class="math display">\[
+\mathcal{B} \coloneqq \{ B(w; r) \coloneqq \{ z \mid \| z - w \|_{[a, b]} &lt; r \} \mid w \in M, r \in \mathbb{Q}_{&gt;0}\}
+\]</span> とおくと, <span class="math inline">\(\mathcal{B}\)</span> は可算であり, かつ, 開基になっている. なぜなら, 任意の開集合 <span class="math inline">\(G \subset C[a, b]\)</span> と任意の点 <span class="math inline">\(x \in G\)</span> をとると, 開集合の性質からある <span class="math inline">\(\varepsilon &gt; 0\)</span> が存在して <span class="math inline">\(x \in B(x; \varepsilon) \subset G\)</span> が成り立つ. <span class="math inline">\(M\)</span> の稠密性より, ある <span class="math inline">\(w\in B(x; \varepsilon / 2) \cap M\)</span> が存在して <span class="math inline">\(\| x - w \|_{[a, b]} &lt; \varepsilon / 2\)</span> とできる. ここで, 有理数の稠密性より <span class="math display">\[
+\| x - w \|_{[a, b]} &lt; r &lt; \varepsilon / 2
+\]</span> を満たす <span class="math inline">\(r \in \mathbb{Q}\)</span> が選べて, <span class="math inline">\(x \in B(w; r)\)</span> となる. 任意の <span class="math inline">\(y\in B(w; r)\)</span> に対して, <span class="math display">\[
+\| x - y \|_{[a, b]}
+\leq \| x - w \|_{[a, b]} + \| w - y \|_{[a, b]}
+&lt; 2 r &lt; \varepsilon
+\]</span> なので, <span class="math inline">\(B(w; r) \subset B(x; \varepsilon)\)</span> である. 以上より, 任意の開集合 <span class="math inline">\(G\subset C[a, b]\)</span> とその任意の内点 <span class="math inline">\(x \in G\)</span> に対して, <span class="math display">\[
+x \in B(w; r) \subset G
+\]</span> を満たす <span class="math inline">\(B(w; r) \in \mathcal{B}\)</span> が存在するので, <span class="math inline">\(\mathcal{B}\)</span> は <span class="math inline">\(C[a, b]\)</span> の開基である.</p>
+<p>次に, <span class="math inline">\(\mathcal{B}\)</span> に含まれる任意の開球が, <span class="math inline">\(\sigma[\pi_t]\)</span> に含まれることを示す.</p>
+<p>連続関数の差は連続なので, <a href="#lem-sup-dense" class="quarto-xref">Lemma 21</a> より, <span class="math display">\[
+\sup_{t\in[a, b]} | z(t) - w(t) | = \sup_{t\in[a, b]\cap\mathbb{Q}} | z(t) - w(t) |
+\]</span> である. 任意の <span class="math inline">\(w\in M\)</span> および, <span class="math inline">\(r \in \mathbb{Q}_{&gt;0}\)</span> に対して, <span class="math display">\[
+\begin{align*}
+  B(w;r)
+  &amp;= \{ z \mid \sup_{t\in[a, b]} | z(t) - w(t) | &lt; r \} \\
+  &amp;= \{ z \mid \sup_{q\in[a, b]\cap\mathbb{Q}} | z(q) - w(q) | &lt; r \} \\
+  &amp;= \bigcap_{q\in[a, b]\cap\mathbb{Q}} \{ z \mid | z(q) - w(q) | &lt; r \} \\
+  &amp;= \bigcap_{q\in[a, b]\cap\mathbb{Q}} \pi_t^{-1} \left( (w(q) - r, w(q) + r) \right)
+\end{align*}
+\]</span> 開区間 <span class="math inline">\((w(q) - r, w(q) + r)\in\mathbb{R}\)</span> はボレル集合なので, <span class="math inline">\(\pi_t^{-1} \left( (w(q) - r, w(q) + r) \right) \in \sigma[\pi_t]\)</span> が成り立つ. <span class="math inline">\(\sigma\)</span>-加法族は可算交差で閉じているので, <span class="math display">\[
+\bigcap_{q\in[a, b]\cap\mathbb{Q}} \pi_t^{-1} \left( (w(q) - r, w(q) + r) \right)
+\in \sigma[\pi_t]
+\]</span> したがって, <span class="math inline">\(\mathscr{B}(C[a, b])\subset\sigma[\pi_t]\)</span>.</p>
+</div>
 <div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -4875,9 +5051,9 @@ a \in B(a; \varepsilon) \cap B(x_i; 1 / n) \subset O \cap M
 </div>
 </div>
 </div>
-<ul>
-<li><a href="#lem-cadlag-separable" class="quarto-xref">Lemma 10</a> で示した.</li>
-</ul>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><a href="#lem-cadlag-separable" class="quarto-xref">Lemma 10</a> で示した.</p>
+</div>
 <div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -4892,9 +5068,9 @@ a \in B(a; \varepsilon) \cap B(x_i; 1 / n) \subset O \cap M
 </div>
 </div>
 </div>
-<ul>
-<li><a href="#lem-continuous-cadlag-bounded" class="quarto-xref">Lemma 7</a> で示した.</li>
-</ul>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><a href="#lem-continuous-cadlag-bounded" class="quarto-xref">Lemma 7</a> で示した.</p>
+</div>
 <div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -4940,6 +5116,9 @@ a \in B(a; \varepsilon) \cap B(x_i; 1 / n) \subset O \cap M
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-billingsley1999" class="csl-entry" role="listitem">
 Billingsley, Patrick. 1999. <em>Convergence of Probability Measures</em>. 2nd ed. New York: Wiley.
+</div>
+<div id="ref-kosorok2008" class="csl-entry" role="listitem">
+Kosorok, Miguel R. 2008. <em>Introduction to Empirical Processes and Semiparametric Inference</em>. Springer.
 </div>
 <div id="ref-ronald2014" class="csl-entry" role="listitem">
 Ronald, C. Freiwald. 2014. <em>An Introduction to Set Theory and Topology</em>. Washington University.
