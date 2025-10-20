@@ -3317,10 +3317,6 @@ window.Quarto = {
 <li><span class="math inline">\(A \subset \D\)</span> が稠密. <span class="math inline">\(\Leftrightarrow \overline{A} = \D\)</span></li>
 <li>距離空間 <span class="math inline">\(\D\)</span> が可分. <span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(\D\)</span> が高々可算で稠密な部分集合をもつ.</li>
 <li><span class="math inline">\(A \subset \D\)</span> がコンパクト. <span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(A\)</span> は閉集合, かつ, <span class="math inline">\(A\)</span> に含まれる任意の点列は収束する部分列をもつ.</li>
-</ul>
-<!-- TODO: semimetric ではなく, pseudometric か.
-An Introduction to Set Theory and Topology 参照 -->
-<ul>
 <li>擬距離空間（pseudometric space）が完備 <span class="math inline">\(\Leftrightarrow\)</span> 任意のコーシー列が収束する.</li>
 <li>完備な擬距離空間の部分集合がコンパクト <span class="math inline">\(\Leftrightarrow\)</span> 全有界かつ閉.</li>
 </ul>
@@ -4707,7 +4703,7 @@ P(\lim g(X_n) = g(X))
 <p><span class="math inline">\(\omega\in A\)</span> に対して <span class="math inline">\(d(X_n(\omega), X(\omega)) \to 0\)</span> なので, 連続性の仮定より, <span id="eq-as-ast-convergence"><span class="math display">\[
 \forall \omega \in A, \quad e(g_n(X_n(\omega)), g_0(X(\omega))) \to 0
 \tag{11}\]</span></span> が成り立つ.</p>
-<p><span class="math inline">\(Y_n \coloneqq e(g_n(X_n), g_0(X))\)</span> とおくと, 各 <span class="math inline">\(n\)</span> についてその最小可測上包 <span class="math inline">\(Y_n^\ast\)</span> が存在する. また <a href="#lem-minimal-measurable-majorant" class="quarto-xref">Lemma 17</a> の性質1より, <span id="eq-minimal-measurable-majorant-1"><span class="math display">\[
+<p><span class="math inline">\(Y_n \coloneqq e(g_n(X_n), g_0(X))\)</span> とおくと, 各 <span class="math inline">\(n\)</span> についてその最小可測優関数 <span class="math inline">\(Y_n^\ast\)</span> が存在する. また <a href="#lem-minimal-measurable-majorant" class="quarto-xref">Lemma 17</a> の性質1より, <span id="eq-minimal-measurable-majorant-1"><span class="math display">\[
 Y_n \leq Y_n^\ast
 \tag{12}\]</span></span> なので, <span class="math inline">\(Y_n^\ast \stackrel{as}{\to} 0\)</span> を示せばよい（つまり <span class="math inline">\(\Delta_n&#39;\)</span> として <span class="math inline">\(Y_n^\ast\)</span> がとれていることを示せばよい）.</p>
 <p><a href="#eq-as-ast-convergence" class="quarto-xref">Equation 11</a> を言い換えると, 任意の <span class="math inline">\(\omega\in A, \varepsilon&gt;0\)</span> に対して, ある <span class="math inline">\(n_0 = n_0(\omega, \varepsilon)\in\mathbb{N}\)</span> が存在して, 任意の <span class="math inline">\(n\geq n_0\)</span> に対して <span class="math display">\[
@@ -4716,9 +4712,7 @@ Y_n(\omega) &lt; \varepsilon
 Y_n^\ast(\omega) \leq \varepsilon
 \]</span> が成り立つ. したがって, <span class="math inline">\(Y_n^\ast \stackrel{as}{\to} 0\)</span> が成り立つ.</p>
 </div>
-<ul>
-<li>a.s.の証明は保留. 上の証明は, 下から5行目の <span class="math inline">\(Y_n(\omega) &lt; \varepsilon\)</span> が任意の <span class="math inline">\(\omega\in A\)</span> について成り立つわけではない（<span class="math inline">\(n_0\)</span> にも依存している）にもかかわらず, 次でa.s.で不等式が成立することを仮定する <a href="#lem-minimal-measurable-majorant" class="quarto-xref">Lemma 17</a> を使って議論しているのが不適切であるように思える.</li>
-</ul>
+<p>-　a.s.の証明は保留. 上の証明は, 下から5行目の <span class="math inline">\(Y_n(\omega) &lt; \varepsilon\)</span> が任意の <span class="math inline">\(\omega\in A\)</span> について成り立つわけではない（<span class="math inline">\(n_0\)</span> にも依存している）にもかかわらず, 次でa.s.で不等式が成立することを仮定する <a href="#lem-minimal-measurable-majorant" class="quarto-xref">Lemma 17</a> を使って議論しているのが不適切である.</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -4879,15 +4873,15 @@ P \left(\sup_{\substack{\rho(s, t) &lt; 2^{-m} \\ s, t \in T_0}} |X_{s} - X_{t}|
 \begin{align*}
   | E^\ast [f(X_n)] - E[f(X)] |
   &amp;\leq | E^\ast [f(X_n)] - E^\ast [f(X_n \circ \pi_m)] | + | E^\ast [f(X_n \circ \pi_m)] - E[f(X)] | \\
-  &amp;\leq | E^\ast [f(X_n)] - E^\ast [f(X_n \circ \pi_m)] | + o(1) \\
-  &amp;\leq  E^\ast [| f(X_n) - f(X_n \circ \pi_m) |] + o(1) \\
-  &amp;\leq  E^\ast [\| f \|_\text{lip} \varepsilon + M \Large\mathbb{1}_{\normalsize \{\| X_n - X_n \circ \pi_m \|_T &gt; \varepsilon\}} \normalsize] + o(1) \quad[\because \text{以下で補足}]\\
-  &amp;= \| f \|_{\text{lip}} \varepsilon + M P^\ast (\| X_n - X_n \circ \pi_m \|_T &gt; \varepsilon) + o(1)
+  &amp;\leq | E^\ast [f(X_n)] - E^\ast [f(X_n \circ \pi_m)] | + | E^\ast [f(X_n \circ \pi_m)] - E[f(X)] |\\
+  &amp;\leq  E^\ast [| f(X_n) - f(X_n \circ \pi_m) |] + | E^\ast [f(X_n \circ \pi_m)] - E[f(X)] | \\
+  &amp;\leq  E^\ast [\| f \|_\text{lip} \varepsilon + M \Large\mathbb{1}_{\normalsize \{\| X_n - X_n \circ \pi_m \|_T &gt; \varepsilon\}} \normalsize] + | E^\ast [f(X_n \circ \pi_m)] - E[f(X)] |
+  &amp;= \| f \|_{\text{lip}} \varepsilon + M P^\ast (\| X_n - X_n \circ \pi_m \|_T &gt; \varepsilon) + | E^\ast [f(X_n \circ \pi_m)] - E[f(X)] |
 \end{align*}
 \]</span> 3行目から4行目の不等式評価が成り立つ理由は以下の通り. <span class="math inline">\(\| X_n - X_n \circ \pi_m \|_T \leq \varepsilon\)</span> のとき, リプシッツ性より <span class="math inline">\(| f(X_n) - f(X_n \circ \pi_m) | \leq \| f \|_\text{lip} \varepsilon\)</span> である. 一方, <span class="math inline">\(\| X_n - X_n \circ \pi_m \|_T &gt; \varepsilon\)</span> のとき, 有界性より <span class="math inline">\(| f(X_n) - f(X_n \circ \pi_m) | \leq M\)</span> である. したがって, <span class="math display">\[
 | f(X_n) - f(X_n \circ \pi_m) | \leq \| f \|_\text{lip} \varepsilon + M \Large\mathbb{1}_{\normalsize \{\| X_n - X_n \circ \pi_m \|_T &gt; \varepsilon\}}
 \]</span> が常に成り立つ.</p>
-<p><span class="math inline">\(\varepsilon = 2^{-m}\)</span> とすることで, <span class="math inline">\(\| f \|_{\text{lip}} 2^{-m} + M 2^{-m} + o(1)\)</span> で抑えることができて, <span class="math inline">\(X_n \leadsto X\)</span> が示された.</p>
+<p><span class="math inline">\(\varepsilon = 2^{-m}\)</span> とすることで, <span class="math inline">\(\| f \|_{\text{lip}} 2^{-m} + M 2^{-m} + | E^\ast [f(X_n \circ \pi_m)] - E[f(X)] |\)</span> で上から抑えることができて, これは <span class="math inline">\(n\to\infty\)</span> とした後に <span class="math inline">\(m\to\infty\)</span> とすることで <span class="math inline">\(0\)</span> に収束する. したがって, <span class="math inline">\(X_n \leadsto X\)</span> が示された.</p>
 </div>
 <div class="callout callout-style-simple callout-important no-icon">
 <div class="callout-body d-flex">
@@ -5302,11 +5296,12 @@ x \in B(w; r) \subset G
   B(w;r)
   &amp;= \{ z \mid \sup_{t\in[a, b]} | z(t) - w(t) | &lt; r \} \\
   &amp;= \{ z \mid \sup_{q\in[a, b]\cap\mathbb{Q}} | z(q) - w(q) | &lt; r \} \\
-  &amp;= \bigcap_{q\in[a, b]\cap\mathbb{Q}} \{ z \mid | z(q) - w(q) | &lt; r \} \\
-  &amp;= \bigcap_{q\in[a, b]\cap\mathbb{Q}} \pi_t^{-1} \left( (w(q) - r, w(q) + r) \right)
+  &amp;= \bigcup_{0&lt;r&#39;&lt;r, r&#39; \in \mathbb{Q}} \{ z \mid \sup_{q\in[a, b]\cap\mathbb{Q}} | z(q) - w(q) | \leq r&#39; \} \\
+  &amp;= \bigcup_{0&lt;r&#39;&lt;r, r&#39; \in \mathbb{Q}} \bigcap_{q\in[a, b]\cap\mathbb{Q}} \{ z \mid | z(q) - w(q) | &lt; r&#39; \} \\
+  &amp;= \bigcup_{0&lt;r&#39;&lt;r, r&#39; \in \mathbb{Q}} \bigcap_{q\in[a, b]\cap\mathbb{Q}} \pi_t^{-1} \left( (w(q) - r&#39;, w(q) + r&#39;) \right)
 \end{align*}
-\]</span> 開区間 <span class="math inline">\((w(q) - r, w(q) + r)\in\mathbb{R}\)</span> はボレル集合なので, <span class="math inline">\(\pi_t^{-1} \left( (w(q) - r, w(q) + r) \right) \in \sigma[\pi_t]\)</span> が成り立つ. <span class="math inline">\(\sigma\)</span>-加法族は可算交差で閉じているので, <span class="math display">\[
-\bigcap_{q\in[a, b]\cap\mathbb{Q}} \pi_t^{-1} \left( (w(q) - r, w(q) + r) \right)
+\]</span> 開区間 <span class="math inline">\((w(q) - r&#39;, w(q) + r&#39;)\in\mathbb{R}\)</span> はボレル集合なので, <span class="math inline">\(\pi_t^{-1} \left( (w(q) - r&#39;, w(q) + r&#39;) \right) \in \sigma[\pi_t]\)</span> が成り立つ. <span class="math inline">\(\sigma\)</span>-加法族は可算交差および可算和で閉じているので, <span class="math display">\[
+\bigcup_{0&lt;r&#39;&lt;r, r&#39; \in \mathbb{Q}} \bigcap_{q\in[a, b]\cap\mathbb{Q}} \pi_t^{-1} \left( (w(q) - r&#39;, w(q) + r&#39;) \right)
 \in \sigma[\pi_t]
 \]</span> したがって, <span class="math inline">\(\mathscr{B}(C[a, b])\subset\sigma[\pi_t]\)</span>.</p>
 </div>
@@ -5353,10 +5348,16 @@ x \in B(w; r) \subset G
 <div id="exr-6" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 6 (<span class="citation" data-cites="vaart1998">van der Vaart (<a href="#ref-vaart1998" role="doc-biblioref">1998</a>)</span> Problems 18.6)</strong></span>  </p>
 <hr>
-<p>任意の <span class="math inline">\(h \in D[-\infty, \infty]\)</span> と任意の <span class="math inline">\(\varepsilon &gt; 0\)</span> をとる. <span class="math inline">\(-\infty = u_0 &lt; u_1 &lt; \dots &lt; u_m = \infty\)</span> を満たすような有限列 <span class="math inline">\(\{u_m\}\)</span> で, 任意のk半開区間 <span class="math inline">\([u_i, u_{i+1})\)</span> に対して, <span class="math inline">\(\sup_{s, t \in [u_i, u_{i+1})} | h(s) - h(t) | &lt; \varepsilon\)</span> となるような列が存在することを示せ.</p>
+<p>任意の <span class="math inline">\(h \in D[-\infty, \infty]\)</span> と任意の <span class="math inline">\(\varepsilon &gt; 0\)</span> をとる. <span class="math inline">\(-\infty = u_0 &lt; u_1 &lt; \dots &lt; u_m = \infty\)</span> を満たすような有限列 <span class="math inline">\(\{u_m\}\)</span> で, 任意の半開区間 <span class="math inline">\([u_i, u_{i+1})\)</span> に対して, <span class="math display">\[
+\sup_{\Large{s, t \in [u_i, u_{i+1})}} \normalsize | h(s) - h(t) | &lt; \varepsilon
+\]</span> となるような列が存在することを示せ.</p>
 </div>
 </div>
 </div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><br>
+<a href="#lem-cadlag-bounded" class="quarto-xref">Lemma 6</a> で, <span class="math inline">\(a = -\infty, b = \infty\)</span> の場合である.</p>
 </div>
 <div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">
